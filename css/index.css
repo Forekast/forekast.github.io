@@ -1,0 +1,65 @@
+#sidebar {
+	float: left;
+	width: 366px;
+}
+
+#sidebar ul, #sidebar li {
+	padding: 0;
+	margin: 0;
+}
+
+#main-content {
+/*	border:1px solid green;*/
+/*	margin-left: 200px;*/
+}
+
+#main-content div {
+	display: none;
+}
+
+#container {
+/*	width: 1024px;*/
+	margin: 10px auto;
+}
+
+#accordion-bar {
+	display:inline-block;
+	position:relative;
+/*	left: 100px;*/
+/*	top: 10px;*/
+}
+
+#portrait {
+	display:inline-block;
+	position:relative;
+/*	left: 880px;*/
+	width: 184px;
+	height: 184px;
+	background: #40C070;
+}
+
+#clear {
+	clear: both;
+}
+
+abbr {
+	border-bottom:1px dotted gray;
+	cursor:help;
+}
+
+iframe {
+	background-color: black;
+/*	height: 100%;*/
+	width: 800px;
+}
+
+body{
+/*	background-image:url('../img/tweed/tweed.png');*/
+/*	background-image:url('../img/dark-grey-tile/px_by_Gre3g.png');*/
+/*	background-image:url('../img/debut_dark/debut_dark.png');*/
+/*	background-image:url('../img/grey-tile/random_grey_variations.png');*/
+/*	background-image:url('../img/woven/woven.png');*/
+	background-image:url('../img/binding_dark/binding_dark.png');
+
+	background-repeat:repeat;
+}

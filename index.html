@@ -4,8 +4,11 @@
   <title>Mak's Portfolio</title>
   	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-  	<script src="http://www.slidorion.com/js/jquery.easing.js"></script>
-	<link rel="stylesheet" href="index.css" type="text/css" media="screen" title="index" charset="utf-8">
+  	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/liteaccordion.jquery.min.js"></script>
+	<link rel="stylesheet" href="css/index.css" type="text/css" media="screen" title="index" charset="utf-8">
+	<link rel="stylesheet" href="css/liteAccordion.css" type="text/css" media="screen" title="index" charset="utf-8">
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700' rel='stylesheet' type='text/css'>
   <script>
 	$(document).ready(function() {
 		$('#main-content div').each(function( index ) {
@@ -18,16 +21,66 @@
 		    $('#sidebar ul').append(newItem);
 		    link.remove();
 		});
+		
+		$("#horizAccord").liteAccordion({
+			"theme":"custom",
+			"containerWidth":"800",
+			"containerHeight":"140",
+			"headerWidth":"80",
+			"slideSpeed":"400"
+		});
 	});
   </script>
   
 </head>
 <body>
+	<div id="container">
+		<div id="accordion-bar">
+			<div id="horizAccord">
+		        <ol>
+		            <li>
+		                <h2><span>co.llide</span></h2>
+		                <div></div>
+		            </li>
+		            <li>
+		                <h2><span>TinkerTech</span></h2>
+		                <div></div>
+		            </li>
+		            <li>
+		                <h2><span>Nyx</span></h2>
+		                <div>
+							<!-- nyx website, which I made! -->
+							2011.04 - <a target="_blank" href="http://nyx.gradientstudios.com/">Nyx Game Site</a>
+						</div>
+		            </li>
+		            <li>
+		                <h2><span>Pinfall</span></h2>
+		                <div></div>
+		            </li>
+		            <li>
+		                <h2><span>Mascots</span></h2>
+		                <div></div>
+		            </li>
+		            <li>
+		                <h2><span>Blender</span></h2>
+		                <div></div>
+		            </li>
+		            <li>
+		                <h2><span>Logo Design</span></h2>
+		                <div></div>
+		            </li>
+		        </ol>
+		        <noscript>
+		            <p>Please enable JavaScript to get the full experience.</p>
+		        </noscript>
+		    </div>
+			<div id="portrait">
+			</div>
+		</div>
+	</div>
 	
-	<!-- nyx website, which I made! -->
-	2011.04 - <a target="_blank" href="http://nyx.gradientstudios.com/">Nyx Game Site</a>
-	<!-- "accodion" no class -->
-	<div id="content">
+	
+	<!-- <div id="content">
 		<div id="sidebar">
 			<ul>
 			</ul>
@@ -52,6 +105,6 @@
 			<div><span class="link">[2013] co.llide - picture tutorial</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/07zGs/embed"></iframe></div>
 		</div>
 		<div id="clear"></div>
-	</div>
+	</div> -->
 </body>
 </html>
