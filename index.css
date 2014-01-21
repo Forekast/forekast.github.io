@@ -3,9 +3,14 @@
 	width: 366px;
 }
 
-#sidebar ul, #sidebar li {
+#sidebar ul {
 	padding: 0;
 	margin: 0;
+}
+#sidebar li {
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
 }
 
 #main-content {
