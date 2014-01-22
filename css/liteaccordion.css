@@ -267,15 +267,24 @@
     -o-box-shadow: 0 -1px 0 #5b5b5b inset, 0 5px 15px rgba(0, 0, 0, 0.4);
     box-shadow: 0 -1px 0 #5b5b5b inset, 0 5px 15px rgba(0, 0, 0, 0.4);
 }
-.liteAccordion.custom .slide > h2 { background: #030303; text-shadow: 0 -1px 0 #030303; line-height: 265% }
-.liteAccordion.custom .slide > h2 span { background: #353535; color: white; font-family: 'Josefin Sans', sans-serif; font-weight: 400; font-size: 24px; text-align: left; padding: 30px 0px 0px 10px;}
+.liteAccordion.custom .slide > h2 { background: #030303; text-shadow: 0 -1px 0 #030303; line-height: 700%; } /* fake align bottom */
+.liteAccordion.custom .slide > h2 span { 
+	background: #353535; /* background while UNselected (default #353535)*/
+	color: white; 
+	font-family: 'Josefin Sans', sans-serif; 
+	font-weight: 400; 
+	font-size: 24px; 
+	text-align: left; 
+	padding-left: 10px; /* push text up (left) */
+/*	padding: 30px 0px 0px 10px;*/
+}
 .liteAccordion.custom .slide > h2 b { background: #353535; color: #030303; text-shadow: -1px 1px 0 #5b5b5b }
 .liteAccordion.custom .slide > h2.selected span, .liteAccordion.custom .slide > h2.selected span:hover {
-	padding: 30px 0px 0px 10px;
+/*	padding: 30px 0px 0px 10px;*/
     background: #353535;
     background: -moz-linear-gradient(left,  #353535 0%, #555555 100%);
     background: -webkit-gradient(linear, left top, right top, color-stop(0%,#353535), color-stop(100%,#555555));
-    background: -webkit-linear-gradient(left,  #353535 0%,#555555 100%);
+    background: -webkit-linear-gradient(left,  #353535 0%,#555555 100%); /* left,  #353535 0%,#555555 100% */
     background: -o-linear-gradient(left,  #353535 0%,#555555 100%);
     background: -ms-linear-gradient(left,  #353535 0%,#555555 100%);
     background: linear-gradient(left,  #353535 0%,#555555 100%);
@@ -290,4 +299,11 @@
     background: -ms-linear-gradient(top,  #3a3a3a 0%,#363636 100%);
     background: linear-gradient(top,  #3a3a3a 0%,#363636 100%);
 }
-.liteAccordion.custom .slide > div { background: #030303; margin-left: 5px }
+.liteAccordion.custom .slide > div { 
+	height: 140px !important;
+	width: 227px !important; /* size of image */
+/*	left: 5px !important;*/
+	padding: 0 5px;
+	background: #030303; 
+	margin-left: 80px; /* headerWidth */ 
+}

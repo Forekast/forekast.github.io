@@ -18,11 +18,13 @@
 }
 
 #container {
-/*	width: 1024px;*/
+	width: 1024px;
 	margin: 10px auto;
 }
 
 #accordion-bar {
+/*	float:left;*/
+	vertical-align:top;
 	display:inline-block;
 	position:relative;
 /*	left: 100px;*/
@@ -30,12 +32,25 @@
 }
 
 #portrait {
+	text-align:center;
 	display:inline-block;
 	position:relative;
-/*	left: 880px;*/
+/*	left: 120px;*/
 	width: 184px;
 	height: 184px;
-	background: #40C070;
+/*	background: #40C070;*/
+}
+
+#gravatar{
+	display:inline-block;
+	position:relative;
+	margin: 3px;
+	padding: 2px;
+	border: rgb(255, 255, 192) solid 1px;
+	width:120px;
+	height:120px;
+/*	background-image:url("http://www.gravatar.com/avatar/16835ccf63c05eea442ba1bb3e75dddc?s=120");*/
+/*	background-repeat:no-repeat;*/
 }
 
 #clear {
@@ -54,6 +69,7 @@ iframe {
 }
 
 body{
+	color: white; font-family: 'Josefin Sans', sans-serif;
 /*	background-image:url('../img/tweed/tweed.png');*/
 /*	background-image:url('../img/dark-grey-tile/px_by_Gre3g.png');*/
 /*	background-image:url('../img/debut_dark/debut_dark.png');*/
@@ -62,4 +78,8 @@ body{
 	background-image:url('../img/binding_dark/binding_dark.png');
 
 	background-repeat:repeat;
+}
+
+a{
+	color: rgb(255, 255, 192); font-family: 'Josefin Sans', sans-serif;
 }
