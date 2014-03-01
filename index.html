@@ -9,29 +9,7 @@
     <link rel="stylesheet" href="css/index.css" type="text/css" media="screen" title="index" charset="utf-8">
     <link rel="stylesheet" href="css/liteAccordion.css" type="text/css" media="screen" title="index" charset="utf-8">
     <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700' rel='stylesheet' type='text/css'>
-    <script>
-      $(document).ready(function() {
-      $('#main-content div').each(function( index ) {
-      var link = $('.link', this)[0];
-      var linkContent = $('.link', this)[0].innerHTML;
-      var newItem = $("<li>").append(linkContent).click(function () {
-	$('#main-content div').hide();
-	$('#main-content div:nth-child(' + ( index + 1 ) + ')').show();
-	});
-	$('#sidebar ul').append(newItem);
-	link.remove();
-	});
-
-	$("#horizAccord").liteAccordion({
-	"theme":"custom",
-	"containerWidth":"800",
-	"containerHeight":"140",
-	"headerWidth":"80",
-	"slideSpeed":"400"
-	});
-	});
-    </script>
-
+    <script src="js/main.js"></script>
   </head>
   <body>
     <div id="container">
