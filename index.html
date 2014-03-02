@@ -5,7 +5,7 @@
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/liteaccordion.jquery.min.js"></script>
+    <script src="js/liteaccordion.jquery.js"></script>
     <link rel="stylesheet" href="css/index.css" type="text/css" media="screen" title="index" charset="utf-8">
     <link rel="stylesheet" href="css/liteAccordion.css" type="text/css" media="screen" title="index" charset="utf-8">
     <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -17,34 +17,34 @@
 	<div id="horizAccord">
 	  <ol>
 	    <li>
-	      <h2><span>co.llide</span></h2>
+	      <h2 data-category="collide"><span>co.llide</span></h2>
 	      <div><img src="img/demo2.png" alt="collide title image"></img></div>
 	    </li>
 	    <li>
-	      <h2><span>TinkerTech</span></h2>
+	      <h2 data-category="tinkertech"><span>TinkerTech</span></h2>
 	      <div><img src="img/tinkertech-title2.png" alt="tinker tech title image"></img></div>
 	    </li>
 	    <li>
-	      <h2><span>Nyx</span></h2>
+	      <h2 data-category="nyx"><span>Nyx</span></h2>
 	      <div><img src="img/nyx_wallpaper-detail.png" alt="nyx title image"></img>
 		<!-- nyx website, which I made! -->
 		2011.04 - <a target="_blank" href="http://nyx.gradientstudios.com/">Nyx Game Site</a>
 	      </div>
 	    </li>
 	    <li>
-	      <h2><span>Pinfall</span></h2>
+	      <h2 data-category="pinfall"><span>Pinfall</span></h2>
 	      <div><img src="img/boost.png" alt="pinfall title image"></img></div>
 	    </li>
 	    <li>
-	      <h2><span>Mascots</span></h2>
+	      <h2 data-category="mascots"><span>Mascots</span></h2>
 	      <div><img src="img/mascot-example2.png" alt="mascots title image"></img></div>
 	    </li>
 	    <li>
-	      <h2><span>Blender</span></h2>
+	      <h2 data-category="pistol"><span>Blender</span></h2>
 	      <div><img src="img/blender-gun2.png" alt="blender title image"></img></div>
 	    </li>
 	    <li>
-	      <h2><span>Logo Design</span></h2>
+	      <h2 data-category="logo"><span>Logo Design</span></h2>
 	      <div><img src="img/logo-demo.png" alt="logos title image"></img></div>
 	    </li>
 	  </ol>
@@ -62,7 +62,7 @@
       </div>
 
       <div id="sub-category">
-	<span class="link">[2012.05] 3D Model - Olde Pistol (Unfinished)</span>
+	<!-- <span class="link">[2012.05] 3D Model - Olde Pistol (Unfinished)</span> -->
       </div>
       <div id="content-container">
 	<div><iframe class="imgur-album" width="1000" height="480" frameborder="0" src="http://imgur.com/a/0fKkk/embed"></iframe></div>
@@ -77,23 +77,39 @@
 	</ul>
       </div>
       <div id="main-content">
-	<div><span class="link">[2012.05] 3D Model - Olde Pistol (Unfinished)</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/0fKkk/embed"></iframe></div>
-	<div><span class="link">[2011.12] Pinfall - screenshots</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/YdKC7/embed"></iframe></div>
-	<div><span class="link">[2012.01] Blender Animation, Norman, <abbr title='Boston Blender Users Group'>BBUG</abbr></span><iframe width="100%" height="550" src="http://www.youtube-nocookie.com/embed/RHYg4jeq8ZY?rel=0" frameborder="0" allowfullscreen></iframe></div>
-	<div><span class="link">[2010] Logo Design - PerSec Express</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/qi8sl/embed"></iframe></div>
-	<div><span class="link">[2012.05] Gradient Mascots</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/r96e5/embed"></iframe></div>
-	<div><span class="link">[2012] TinkerTech - Concepts</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/kMXK7/embed"></iframe></div>
-	<div><span class="link">[2012] TinkerTech - animated weapon</span><iframe width="100%" height="550" src="http://www.youtube-nocookie.com/embed/M7PCcHZ9djI?rel=0" frameborder="0" allowfullscreen></iframe></div>
-	<div><span class="link">[2012] TinkerTech - iterations</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/NvnJV/embed"></iframe></div>
-	<div><span class="link">[2012] TinkerTech - concepts and early designs</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/u6W1l/embed"></iframe></div>
-	<div><span class="link">[2013] co.llide - arena interation and early ship normals</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/pZRQm/embed"></iframe></div>
-	<div><span class="link">[2013] co.llide - character design concepts for factions</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/kz4td/embed"></iframe></div>
-	<div><span class="link">[2013] Boston FIG 2013</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/726wH/embed"></iframe></div>
-	<div><span class="link">[2013] co.llide - screenshots</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/ASPca/embed"></iframe></div>
-	<div><span class="link">[2013] co.llide - early concepts</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/JHcEd/embed"></iframe></div>
-	<div><span class="link">[2013] co.llide - concepts for webGL transition</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/JCbat/embed"></iframe></div>
-	<div><span class="link">[2013] co.llide - early ship modularity demonstration</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/yqIrp/embed"></iframe></div>
-	<div><span class="link">[2013] co.llide - picture tutorial</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/07zGs/embed"></iframe></div>
+        <div class="category" data-category="pistol">
+	  <div><span class="link">[2012.05] 3D Model - Olde Pistol (Unfinished)</span>
+            <div>Hello world!</div>
+            <iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/0fKkk/embed"></iframe></div>
+        </div>
+        <div class="category" data-category="pinfall">
+	  <div><span class="link">[2011.12] Pinfall - screenshots</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/YdKC7/embed"></iframe></div>
+        </div>
+        <div class="category" data-category="blender">
+	  <div><span class="link">[2012.01] Blender Animation, Norman, <abbr title='Boston Blender Users Group'>BBUG</abbr></span><iframe width="100%" height="550" src="http://www.youtube-nocookie.com/embed/RHYg4jeq8ZY?rel=0" frameborder="0" allowfullscreen></iframe></div>
+        </div>
+        <div class="category" data-category="logo">
+	  <div><span class="link">[2010] Logo Design - PerSec Express</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/qi8sl/embed"></iframe></div>
+        </div>
+        <div class="category" data-category="mascots">
+	  <div><span class="link">[2012.05] Gradient Mascots</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/r96e5/embed"></iframe></div>
+        </div>
+        <div class="category" data-category="tinkertech">
+	  <div><span class="link">[2012] TinkerTech - Concepts</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/kMXK7/embed"></iframe></div>
+	  <div><span class="link">[2012] TinkerTech - animated weapon</span><iframe width="100%" height="550" src="http://www.youtube-nocookie.com/embed/M7PCcHZ9djI?rel=0" frameborder="0" allowfullscreen></iframe></div>
+	  <div><span class="link">[2012] TinkerTech - iterations</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/NvnJV/embed"></iframe></div>
+	  <div><span class="link">[2012] TinkerTech - concepts and early designs</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/u6W1l/embed"></iframe></div>
+        </div>
+        <div class="category" data-category="collide">
+	  <div><span class="link">[2013] co.llide - arena interation and early ship normals</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/pZRQm/embed"></iframe></div>
+	  <div><span class="link">[2013] co.llide - character design concepts for factions</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/kz4td/embed"></iframe></div>
+	  <div><span class="link">[2013] Boston FIG 2013</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/726wH/embed"></iframe></div>
+	  <div><span class="link">[2013] co.llide - screenshots</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/ASPca/embed"></iframe></div>
+	  <div><span class="link">[2013] co.llide - early concepts</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/JHcEd/embed"></iframe></div>
+	  <div><span class="link">[2013] co.llide - concepts for webGL transition</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/JCbat/embed"></iframe></div>
+	  <div><span class="link">[2013] co.llide - early ship modularity demonstration</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/yqIrp/embed"></iframe></div>
+	  <div><span class="link">[2013] co.llide - picture tutorial</span><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/07zGs/embed"></iframe></div>
+        </div>
       </div>
       <div id="clear"></div>
     </div>
