@@ -1,3 +1,24 @@
+div {
+	margin:1em 0em 1em 2em;
+}
+table, th, tr {
+	font-family:sans-serif;
+	text-align:left;
+	border: 1px solid #1b8ec5;
+	border-collapse: collapse;
+	padding: 0.3em;
+	padding-left: 0.6em;
+}
+td {
+	font-size:0.8em;
+	font-family:sans-serif;
+	text-align:left;
+	padding: 0.3em;
+}
+tbody tr td {
+	padding-left: 0.8em;
+	padding-right: 0.8em;
+}
 thead {
     color: white;
 	text-align:left;
@@ -6,3 +27,32 @@ thead {
 h2 {
 	background-color:#e0e9f5;
 }
+p {
+	margin:0;
+	padding:0;
+	padding-left: 2%;
+}
+#skills {
+	width: 30em;
+}
+#powers {
+	width: 50em;
+}
+.topBar {
+	background-color:#e0e9f5;
+	height: 5em;
+	width: 40em;
+}
+.bigName {
+/* 	padding-top:0.5%; */
+	color:blue;
+	font-size:3em;
+	
+	-webkit-text-fill-color: white;
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: #1b8ec5;
+}
+/* img {
+	width: 50px;
+	height: 50px;
+} */
