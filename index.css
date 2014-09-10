@@ -28,6 +28,7 @@ h2 {
 	background-color:#e0e9f5;
 }
 p {
+	font-family:sans-serif;
 	margin:0;
 	padding:0;
 	padding-left: 2%;
@@ -47,10 +48,9 @@ p {
 /* 	padding-top:0.5%; */
 	color:blue;
 	font-size:3em;
-	
 	-webkit-text-fill-color: white;
-   -webkit-text-stroke-width: 1px;
-   -webkit-text-stroke-color: #1b8ec5;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #1b8ec5;
 }
 /* img {
 	width: 50px;
