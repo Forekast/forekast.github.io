@@ -1,5 +1,6 @@
 div {
 	/*margin:1em 0em 1em 2em;*/
+	margin-bottom: 1em;
 }
 body {
 	background-color: #CCCCCC;
@@ -42,15 +43,15 @@ p {
 	/*padding: 1em 0em 1em 0em;*/
 	background-color: #FDFDFF;
 	border: 0.5em solid #1b8ec5;
-	box-shadow: 0 0 0 1em #222222, 0 0 0 0.5em #e0e9f5 inset, 0 0 0 1.3em #FFF;
+	box-shadow: 0 0 0 1em #222222, 0 0 0 0.2em #e0e9f5 inset, 0 0 0 1.3em #FFF;
 	border-radius: 1em;
-	width: 50em;
+	width: 49em;
 }
 #skills {
 	width: 30em;
 }
 #powers {
-	width: 50em;
+	width: 49em;
 }
 .topBar {
 	background-color:#e0e9f5;
@@ -68,17 +69,26 @@ p {
 	margin-top: -0.5em;
 	padding-left: 0.9em;
 }
+.pfsacgLogo {
+	position:absolute;
+	display:flex;
+	max-width: 10em;/* 60:17 */
+	max-height: 2.833333333em;
+	top: 3em;
+	left: 7.5em;
+}
 .portrait {
 	position:absolute;
 	left: 37.5em;
 	top: 1.5em;
-	width:20em;
-	height:20em;
+	width:19.5em;
+	height:22em;
+	transform:scaleX(-1);
 	overflow:hidden;
 }
 .portrait img {
 	/*should be per character since it depends on the image*/
-	margin-left: -4em;
+	margin-left: -3em;
 	margin-top: -0.5em;
 }
 /*---///---Color Schemes---///---*/
@@ -110,7 +120,7 @@ p {
 .schemeColor-Default-characterCard {
 	background-color: #FDFDFF;
 	border: 0.5em solid #1b8ec5;
-	box-shadow: 0 0 0 1em #222222, 0 0 0 0.5em #e0e9f5 inset, 0 0 0 1.3em #FFF;
+	box-shadow: 0 0 0 1em #222222, 0 0 0 0.2em #e0e9f5 inset, 0 0 0 1.3em #FFF;
 }
 /*     Green     */
 .schemeColor-Green-topBar {
@@ -128,5 +138,5 @@ p {
 .schemeColor-Default-characterCard {
 	background-color: #FDFFFD;
 	border: 0.5em solid #53781e;
-	box-shadow: 0 0 0 1em #222222, 0 0 0 0.5em #87ba6f inset, 0 0 0 1.3em #FFF;
+	box-shadow: 0 0 0 1em #222222, 0 0 0 0.2em #87ba6f inset, 0 0 0 1.3em #FFF;
 }
