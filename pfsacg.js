@@ -1,8 +1,9 @@
 $(document).ready(function(){
-		$('div').click(function(){
-			$('div').fadeTo('fast',0.5);
-		});
-		$('div').click(function(){
-			$('div').fadeTo('fast',1);
+		$("#schemeToggle").click(function(){
+			$(".topBar").toggleClass("schemeColor-Default-topBar schemeColor-Green-topBar");
+			$(".bigName").toggleClass("schemeColor-Default-bigName schemeColor-Green-bigName");
+			$("thead").toggleClass("schemeColor-Default-thead schemeColor-Green-thead");
+			$("table, th, tr").toggleClass("schemeColor-Default-thtr schemeColor-Green-thtr");
+			$(".characterCard").toggleClass("schemeColor-Default-characterCard schemeColor-Green-characterCard");
 		});
 });
