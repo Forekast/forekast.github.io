@@ -17,6 +17,7 @@ td {
 	font-family:sans-serif;
 	text-align:left;
 	padding: 0.3em;
+	background-color: white;
 }
 tbody tr td {
 	padding-left: 0.8em;
@@ -36,14 +37,14 @@ p {
 .characterCard {
 	margin: 2em;
 	display:inline-block;
-	padding-top: 2em;
+	padding-top: 3em;
 	padding-bottom: 1em;
 	/*padding: 1em 0em 1em 0em;*/
 	background-color: #FDFDFF;
 	border: 0.5em solid #1b8ec5;
 	box-shadow: 0 0 0 1em #222222, 0 0 0 0.5em #e0e9f5 inset, 0 0 0 1.3em #FFF;
 	border-radius: 1em;
-	width: 55em;
+	width: 50em;
 }
 #skills {
 	width: 30em;
@@ -67,7 +68,19 @@ p {
 	margin-top: -0.5em;
 	padding-left: 0.9em;
 }
-
+.portrait {
+	position:absolute;
+	left: 37.5em;
+	top: 1.5em;
+	width:20em;
+	height:20em;
+	overflow:hidden;
+}
+.portrait img {
+	/*should be per character since it depends on the image*/
+	margin-left: -4em;
+	margin-top: -0.5em;
+}
 /*---///---Color Schemes---///---*/
 #schemeToggle {
 	/*width: 5em;
