@@ -1,6 +1,77 @@
 body {
-	
+	color:#626262;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size:16px;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+	background-color: #ddd;
+
+	max-width: 1000px;
+	min-width: 480px;
+}
+h1 {
+	font-family: 'Droid Serif', serif;
+	font-weight: 400;
+	font-style: italic;
+	padding: 16px 0 24px 0;
 }
 ol {
 	list-style-type: none;
+	padding: 2% 0 2% 0;
 }
+li {
+	/*padding: 10px 0px 10px 0px;*/
+	/*padding-top: 10px;*/
+}
+ol.list {
+	-moz-column-count: 4;
+    -moz-column-gap: 10px;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 10px;
+    column-count: 4;
+    column-gap: 10px;
+}
+a:link,a:visited {
+	color: #0c49aa;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+.dateRange {
+	text-align: right;
+	/*clear: right;*/
+}
+.subsection {
+	color:#0c49aa;
+	font-weight: 700;
+}
+.entry {
+	font-weight: 700;
+}
+#contact {
+	float:right;
+}
+/*.resume {
+	position:relative;
+	max-width: 1000px;
+	min-width: 470px;
+}
+.resume div {
+	margin: 0 5%;
+    background:#ddd;
+}
+.resume div:first-child,
+.resume div:last-child {
+    background:#eee;
+    position:absolute;
+    top:0;
+    min-width: 10px;
+    max-width: 100px;
+}
+.resume div:first-child {
+    left:-110px;
+}
+.resume div:last-child {
+    right:-110px;
+}*/
