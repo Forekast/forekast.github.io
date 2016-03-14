@@ -1,10 +1,13 @@
+* {
+    box-sizing: border-box;
+}
 body {
 	color:#626262;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	font-size:100%;
 	text-shadow: 0 1px 0 rgba(255,255,255,0.8);
-	background-color: #ddd;
+	background-color: #CFCCCE;
 
 	max-width: 800px;
 	min-width: 480px;
@@ -33,20 +36,29 @@ ol {
 	min-height: 120px;
 	max-height: 500px;
     column-fill: auto;
-    column-width: 200px;
+    column-width: 180px;
     column-gap: 0px;
     -moz-column-fill: auto;
-    -moz-column-width: 200px;
+    -moz-column-width: 180px;
     -moz-column-gap: 0px;
     -webkit-column-fill: auto;
-    -webkit-column-width: 200px;
+    -webkit-column-width: 180px;
     -webkit-column-gap: 0px;
 }
-li {
+ol li {
 	width: 200px;
     height: 30px;
     line-height: 30px;
     text-align: left;
+}
+ul {
+    list-style-type: disc;
+    /*margin-left: 0;
+    padding-left: 1em;
+    text-indent: -1em;*/
+}
+ul li {
+    padding-bottom: 0.7em;
 }
 /*ol.list {
 	-moz-column-count: 2;
@@ -82,15 +94,17 @@ div {
 	float: right;
 }
 hr.style1 {
-	height: 10px;
+	height: 6px;
 	border: 0;
-	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+	box-shadow: 0 20px 20px -18px #8c8b8b inset;
 }
 .entry {
+    color: #444;
 	font-weight: 700;
 }
-.subtext {
-	color: #999;
+.jobtitle {
+	color: #66B;
+    font-weight: 700;
 }
 #contact {
 	margin: 0;
