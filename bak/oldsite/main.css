@@ -1,0 +1,211 @@
+/** {
+    box-sizing: border-box;
+}*/
+body {
+	/*color:#626262;*/
+    color:#336;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size:100%;
+	/*text-shadow: 0 1px 0 rgba(255,255,255,0.8);*/
+    text-shadow: 0 1px 0 rgba(250, 250, 250, 0.4);
+	/* background-color: #CFCCCE; */
+    
+    /*background-color: #88A;*/
+    /*background-color: #EEEEFF;*/
+    /*background-image: url("http://www.transparenttextures.com/patterns/bright-squares.png");*/
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    
+    /*background-color: #212133;*/
+
+    /*background-image: url("http://www.transparenttextures.com/patterns/blu-stripes.png");*/
+    /*background-image: url("http://www.transparenttextures.com/patterns/dark-denim-3.png");*/
+    
+    background-color: #ccd;
+    background-image: url("http://www.transparenttextures.com/patterns/green-fibers.png");
+    
+    
+	max-width: 800px;
+	min-width: 320px;
+}
+h1 {
+	font-family: 'Droid Serif', serif;
+	font-weight: 400;
+	font-style: italic;
+	/*padding: 0 0 6px 0;
+	margin: 0 0 0 0;*/
+}
+h2 {
+	font-size: 16;
+	color:#0c49aa;
+	font-weight: 700;
+}
+p {
+	padding: 0;
+	margin: 0;
+	/*margin-bottom: 10px;*/
+}
+ol {
+	list-style-type: none;
+	padding: 0;
+
+	min-height: 120px;
+	max-height: 500px;
+    column-fill: auto;
+    column-width: 180px;
+    column-gap: 0px;
+    -moz-column-fill: auto;
+    -moz-column-width: 180px;
+    -moz-column-gap: 0px;
+    -webkit-column-fill: auto;
+    -webkit-column-width: 180px;
+    -webkit-column-gap: 0px;
+}
+ol li {
+	width: 200px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+}
+ul {
+    list-style-type: disc;
+    /*margin-left: 0;
+    padding-left: 1em;
+    text-indent: -1em;*/
+}
+ul li {
+    padding-bottom: 0.7em;
+}
+nav {  
+    padding-top: 0;
+    text-align: center;
+    /*height: 3%;*/
+}
+nav p { 
+    /*display: inline-block;*/
+    font-family: 'Droid Serif', serif;
+	font-weight: 400;
+	font-style: italic;
+    padding-top: 0.2em;
+    padding-right: 2em;
+    padding-left: 2%;
+    font-size: 2em;
+    float:left;
+    /*line-height: 0em; */
+}
+nav a { 
+    float: right;
+    padding: 0.8em 2%; 
+    font-size: 1.1em;
+    font-weight: bold;
+}
+nav a:link,a:visited {
+	color: #446;
+	text-decoration: none;
+}
+nav a:hover {
+	color: #557;
+    /*background: rgba(200,200,255,0.1)*/
+    /*background: rgba(20,20,255,0.5);*/
+    background: rgba(255,255,255,0.1);
+}
+/*ol.list {
+	-moz-column-count: 2;
+    -moz-column-gap: 10px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 10px;
+    column-count: 2;
+    column-gap: 10px;
+}*/
+a:link,a:visited {
+	color: #0c49aa;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+.centered {
+    /*display: table;*/
+    margin: 0 auto;
+}
+.dateRange {
+	/*text-align: right;*/
+	float:right;
+}
+.section p {
+	margin-bottom: 10px;
+}
+.section a {
+	float: right;
+}
+hr.style1 {
+	height: 6px;
+	border: 0;
+	box-shadow: 0 20px 20px -18px #445  inset;
+}
+.entry {
+    color: #444;
+	font-weight: 700;
+}
+.jobtitle {
+	color: #449;
+    font-weight: 700;
+}
+#contact {
+	margin: 0;
+}
+#contact ul{
+    /*display: inline;*/
+    list-style: none;
+    padding-left: 0;
+}
+#contact p {
+	margin: 0 0 8px 0;
+}
+#menubar{
+    /*max-width: 800px;
+	min-width: 320px;*/
+    /*margin: auto 0;*/
+    /*text-align: center;*/
+    /*display: inline-block; */
+    position: fixed;
+    /*position: sticky;*/
+    top:0;
+    left:0;
+    width: 100%;
+    /*max-width:800px;*/
+    height:3em;
+    background-image: url("http://www.transparenttextures.com/patterns/bright-squares.png");
+    /*background-image: url("http://www.transparenttextures.com/patterns/blu-stripes.png");*/
+    /*opacity: 0.5;*/
+    background-color:#668;
+    box-shadow: 0 1px 1px 2px #445;
+}
+#pagecontent{
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-top: 4em;
+}
+/*.resume {
+	position:relative;
+	max-width: 1000px;
+	min-width: 470px;
+}
+.resume div {
+	margin: 0 5%;
+    background:#ddd;
+}
+.resume div:first-child,
+.resume div:last-child {
+    background:#eee;
+    position:absolute;
+    top:0;
+    min-width: 10px;
+    max-width: 100px;
+}
+.resume div:first-child {
+    left:-110px;
+}
+.resume div:last-child {
+    right:-110px;
+}*/
