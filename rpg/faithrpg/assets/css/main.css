@@ -1,0 +1,193 @@
+/** {
+    border: 0.1em solid red;
+}*/
+html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color:#222;
+    background-image:url(/assets/images/stardust.png);
+    font-family: 'Jura', sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 2%;
+}
+
+#charactersheet {
+    display: block;
+    background-color:#555;
+    background-image:url(/assets/images/broken-noise.png);
+    max-width:90%;
+    margin: auto;
+    /*height: 100%;*/
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    border:1px solid #aaa;
+    
+    -webkit-box-shadow: #000 0em 0.3em 0.3em, inset 0 0 20em 2em rgba(0,0,0,0.5);
+    -moz-box-shadow: #000 0em 0.3em 0.3em, inset 0 0 20em 2em rgba(0,0,0,0.5); 
+    box-shadow: #000 0em 0.3em 0.3em, inset 0 0 20em 2em rgba(0,0,0,0.5);
+}
+#footer {
+    text-align: center;
+    content:url(/assets/images/FAITHrpglogo.png);
+}
+
+ul {
+    list-style: none;
+    /*padding: 0;
+    margin: 0;*/
+    padding: 1em 0;
+    font-size: 1.5em;
+}
+
+.specialfont {
+    font-family: 'ethnocentricregular', Arial, sans-serif;
+    color: #2ab6b4;
+    font-size: 1.5em;
+    text-shadow: 0 0.1em 0.2em #000;
+}
+.damagetype {
+    font-family: 'Jura', sans-serif;
+    color: white;
+    text-shadow: 0 0 0.3em #FFF
+}
+#portrait {
+    float:left;
+    width:250px;
+    height:400px;
+    background-color: white;
+}
+#column2 {
+    float:left;
+}
+#charinfo {
+    width: 200px;
+    height: 100px;
+    background-color: #bbb;
+}
+.god {
+    width:100px;
+    height:100px;
+    background-color: white;
+}
+.suit {
+    width:100px;
+    height:100px;
+    background-color: #ccc;
+}
+.attributes { 
+    float:left; 
+}
+.upgrade { 
+    /*float:left;*/
+    color: white;
+    border-bottom: 3px solid #4588ba; margin-bottom:10px;
+}
+.skills { 
+    /*float: left;*/
+    /*clear: both; */
+}
+
+li{
+    padding-top: 1.4em;
+}
+.upgrade li:before, .attributes li:before {
+    margin-right: 2em;
+    vertical-align: -60%;
+    content:"";
+    display: inline-block;
+    width:42px;
+    height:42px;
+    background-color:#aaa;
+    -webkit-border-radius: 30%;
+    -moz-border-radius: 30%;
+    border-radius: 30%;
+    border:1px solid #222;
+    background: radial-gradient(#2ab6b4 50%, rgba(0,0,0,0) 53.5%);
+}
+.skills li{
+    text-align:right;
+}
+.skills li:after {
+    margin-left: 2em;
+    vertical-align: -60%;
+    content:"";
+    display: inline-block;
+    width:42px;
+    height:42px;
+    background-color:#aaa;
+    -webkit-border-radius: 30%;
+    -moz-border-radius: 30%;
+    border-radius: 30%;
+    border:1px solid #222;
+    background: radial-gradient(#2ab6b4 50%, rgba(0,0,0,0) 53.5%);
+}
+
+
+
+
+
+/*li.dotbox:after{
+    
+}*/
+/*#titleCharacter {
+    display: block;
+    height: 13px;
+    width: 142px;
+    background-image: url(/assets/images/TITLEcharacter.png);
+}
+#titleDamage {
+    display: block;
+    height: 13px;
+    width: 142px;
+    background-image: url(/assets/images/TITLEdamage.png);
+}*/
+
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+.stars, .twinkling{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+  background:#222 url(/assets/images/stardust.png) repeat top center;
+  z-index:-2;
+}
+
+.twinkling{
+  background:transparent url(/assets/images/twinkling.png) repeat top center;
+  z-index:-1;
+
+  -moz-animation:move-twink-back 600s linear infinite;
+  -ms-animation:move-twink-back 600s linear infinite;
+  -o-animation:move-twink-back 600s linear infinite;
+  -webkit-animation:move-twink-back 600s linear infinite;
+  animation:move-twink-back 600s linear infinite;
+}
+

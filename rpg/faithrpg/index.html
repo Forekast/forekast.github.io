@@ -1,9 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-        <title>FAITH RPG Character Sheet</title>
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <title>FAITH: The Sci-Fi RPG - Character Sheet</title>
+        
         <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicon/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicon/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicon/apple-icon-72x72.png">
@@ -24,9 +23,82 @@
         <meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/shapes.css" />
+        <link rel="stylesheet" href="assets/css/stylesheet.css" type="text/css" charset="utf-8" />
+        <link href='https://fonts.googleapis.com/css?family=Jura' rel='stylesheet' type='text/css'>
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+
     </head>
     <body>
-        
+        <div id="charactersheet">
+            <div id="portrait"></div>
+            <div id="column2">
+                <div class="specialfont">
+                    CHARACTER
+                    <div id="charinfo"></div>
+                </div>
+                <div class="god"></div>
+                <div class="suit"></div>
+                <div class="specialfont">
+                    DAMAGE
+                    <div class="damagetype">Physical</div>
+                    <div class="damagetype">Neural</div>
+                </div>
+            </div>
+            <div class="attributes">
+                <ul>
+                    <li>Agility</li>
+                    <li>Constitution</li>
+                    <li>Dexterity</li>
+                    <li>Faith</li>
+                    <li>Link</li>
+                    <li>Mind</li>
+                </ul>
+            </div>
+            <div class="upgrade">
+                <ul>
+                    <li>Upgrade</li>
+                    <li>Upgrade</li>
+                    <li>Upgrade</li>
+                    <li>Upgrade</li>
+                    <li>Upgrade</li>
+                    <li>Upgrade</li>
+                </ul>
+            </div>
+            <div id="horizontalrule"></div>
+            <div id="cut-diamond" style="top:-8px;"></div>
+            <div class="skills" style="text-align:right; float:left;">
+                <ul>
+                    <li>Ballistic</li>
+                    <li>CQC</li>
+                    <li>Hacking</li>
+                </ul>
+            </div>
+            <div class="skills" style="text-align:right; float:left;">
+                <ul>
+                    <li>Initiative</li>
+                    <li>Athletic</li>
+                    <li>EVA</li>
+                </ul>
+            </div>
+            <div class="skills" style="text-align:right; float:left;">
+                <ul>
+                    <li>Piloting</li>
+                    <li>Survival</li>
+                    <li>Cunning</li>
+                </ul>
+            </div>
+            <div class="skills" style="text-align:right">
+                <ul>
+                    <li>Medical</li>
+                    <li>Technical</li>
+                    <li>Professional</li>
+                </ul>
+            </div>
+            <div id="trapezoid"></div>
+        </div>
+        <div id="footer" style="text-align:center"></div>
     </body>
 </html>
         
