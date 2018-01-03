@@ -1,0 +1,91 @@
+'use strict';
+
+module.exports = function(grunt) {
+
+  // Project configuration.
+  grunt.initConfig({
+    nodeunit: {
+      all: ['test/{grunt,tasks,util}/**/*.js'],
+      tap: {
+        src: '<%= nodeunit.all %>',
+        options: {
+          reporter: 'tap',
+          reporterOutput: 'tests.tap'
+        }
+      }
+    },
+    jshint: {
+      gruntfile_tasks: ['Gruntfile.js', 'internal-tasks/*.js'],
+      libs_n_tests: ['lib/**/*.js', '<%= nodeunit.all %>'],
+      subgrunt: ['<%= subgrunt.all %>'],
+      options: {
+        jshintrc: '.jshintrc'
+      }
+    },
+    jscs: {
+      src: [
+        'lib/**/*.js',
+        'internal-tasks/**/*.js',
+        'test/**/*.js',
+        '!test/fixtures/**/*.js'
+      ]
+    },
+    watch: {
+      gruntfile_tasks: {
+        files: ['<%= jshint.gruntfile_tasks %>'],
+        tasks: ['jshint:gruntfile_tasks']
+      },
+      libs_n_tests: {
+        files: ['<%= jshint.libs_n_tests %>'],
+        tasks: ['jshint:libs_n_tests', 'nodeunit']
+      },
+      subgrunt: {
+        files: ['<%= subgrunt.all %>'],
+        tasks: ['jshint:subgrunt', 'subgrunt']
+      }
+    },
+    subgrunt: {
+      all: ['test/gruntfile/*.js']
+    },
+    wiredep: {
+      
+        task: {
+      
+          // Point to the files that should be updated when
+          // you run `grunt wiredep`
+          src: [
+            'app/views/**/*.html',   // .html support...
+            'app/views/**/*.jade',   // .jade support...
+            'app/styles/main.scss',  // .scss & .sass support...
+            'app/config.yml'         // and .yml & .yaml support out of the box!
+          ],
+          
+          options: {
+            // See wiredep's configuration documentation for the options
+            // you may pass:
+      
+            // https://github.com/taptapship/wiredep#configuration
+          }
+        }
+      },
+  });
+
+  // These plugins provide necessary tasks.
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-jscs');
+  grunt.loadNpmTasks('grunt-contrib-nodeunit');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-wiredep');
+
+  // Some internal tasks. Maybe someday these will be released.
+  grunt.loadTasks('internal-tasks');
+
+  // "npm test" runs these tasks
+  grunt.registerTask('test', '', function(reporter) {
+    grunt.task.run(['jshint', 'jscs', 'nodeunit:' + (reporter || 'all'), 'subgrunt']);
+  });
+
+  // Default task.
+  grunt.registerTask('default', ['test']);
+
+};
