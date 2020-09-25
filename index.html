@@ -15,27 +15,32 @@
     <link rel="stylesheet" href="css/mdb.min.css">
     <link rel="stylesheet" href="css/main.css">
 
+    <style>
+        h4 {
+            font-style: italic;
+        }
+    </style>
 
 </head>
 
-<body class="bg-dark-blue-1 text-white">
+<body class="light-blue darken-3 text-white">
 
-    <div class="container-fluid p-0 d-none d-sm-none d-md-block bannerContainer">
+    <div class="container-fluid p-0 d-none d-sm-none d-md-block bannerContainer sidebar-shadow topbar-gradient">
         <div class="row topBanner">
             <div class="col">
                 <div>Mak Mendelson</div>
                 <div class="navHeaderSubtext">UI / UX / Visual & Graphic Design</div>
             </div>
         </div>
-        <div class="bg-dark-blue-2 pb-1"></div>
+        <div class="unique-color-dark pb-1"></div>
     </div>
     <div class="container-fluid p-0">
-        <nav id="navigationMenu" class="sidebar navbar dark-blue-2 font-weight-bold">
-            <div class="navbar-brand navHeader dark-blue-1 d-md-none">
+        <nav id="navigationMenu" class="sidebar navbar font-weight-bold text-white light-blue darken-2 sidebar-shadow navbar-gradient">
+            <div class="navbar-brand navHeader d-md-none">
                 <div>Mak Mendelson</div>
                 <div class="navHeaderSubtext">UI / UX / Visual & Graphic Design</div>
             </div>
-            <nav class="nav nav-pills pl-md-3">
+            <nav id="navButtons" class="nav text-white-50 border-top border-light">
                 <a class="nav-link" href="#s01">Section 1</a>
                 <a class="nav-link" href="#s02">Section 2</a>
                 <a class="nav-link" href="#s03">Section 3</a>
@@ -43,29 +48,35 @@
             </nav>
         </nav>
 
-        <div class="content" data-spy="scroll" data-target="#navigationMenu" data-offset="10">
-            <h4 id="s01">Section 1</h4>
-            <div class="w-100 mb-2" style="height:500px;background-color: azure;"></div>
-            <h4 id="s02">Section 2</h4>
-            <div class="w-100 mb-2" style="height:500px;background-color: azure;"></div>
-            <h4 id="s03">Section 3</h4>
-            <div class="w-100 mb-2" style="height:500px;background-color: azure;"></div>
-            <h4 id="s04">Section 4</h4>
-            <div class="w-100 mb-2" style="height:500px;background-color: azure;"></div>
-            <div style="height:130px;"></div>
+        <div class="content light-blue darken-4 body-gradient" data-spy="scroll" data-target="#navigationMenu" data-offset="10">
+
+            <div id="s01" class="py-4">
+                <h4>Section 1</h4>
+                <div class="w-100 body-gradient-inner" style="height:500px;"></div>
+            </div>
+            <div id="s02" class="py-4">
+                <h4>Section 2</h4>
+                <div class="w-100 body-gradient-inner" style="height:500px;"></div>
+            </div>
+            <div id="s03" class="py-4">
+                <h4>Section 3</h4>
+                <div class="w-100 body-gradient-inner" style="height:500px;"></div>
+            </div>
+            <div id="s04" class="py-4">
+                <h4>Section 4</h4>
+                <div class="w-100 body-gradient-inner" style="height:500px;"></div>
+            </div>
+
+            <div style="height:600px;"></div>
         </div>
 
     </div>
-
-
-    <script>
-
-    </script>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/mdb.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -52,12 +52,12 @@ a {
 }
 
 .sidebar a.active {
-    background-color: #4CAF50;
+    /* background-color: #4CAF50; */
     color: white;
 }
 
 .sidebar a:hover:not(.active) {
-    background-color: #555;
+    background-color: #03a9f4;
     color: white;
 }
 
@@ -156,4 +156,32 @@ a {
 
 .smallcaps {
     font-variant: small-caps;
+}
+
+.sidebar-shadow {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.32), 0 2px 10px 0 rgba(0, 0, 0, 0.24) !important;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.32), 0 2px 10px 0 rgba(0, 0, 0, 0.24) !important;
+    z-index: 5;
+}
+
+.navbar-gradient {
+    background: radial-gradient(circle, rgba(2, 136, 209, 1) 64%, rgba(0, 112, 173, 1) 100%);
+}
+
+.topbar-gradient {
+    background: linear-gradient(0deg, rgba(1, 110, 175, 1) 0%, rgba(2, 119, 189, 1) 100%);
+}
+
+.body-gradient {
+    /* background: linear-gradient(180deg, rgba(5, 104, 182, 1) 0%, rgba(1, 87, 155, 1) 100%); */
+    /* background: rgba(1, 94, 167, 1.0); */
+    background: -webkit-linear-gradient(top, rgba(1, 94, 167, 1.0), rgba(1, 88, 155, 1.0));
+    background: -moz-linear-gradient(top, rgba(1, 94, 167, 1.0), rgba(1, 88, 155, 1.0));
+    background: linear-gradient(to bottom, rgba(1, 94, 167, 1.0), rgba(1, 88, 155, 1.0));
+    /* background: linear-gradient(180deg, rgba(1, 87, 176, 1) 0%, rgba(1, 87, 155, 1) 100%); */
+}
+
+.body-gradient-inner {
+    /* background: radial-gradient(closest-side, rgba(0, 98, 175, 1) 0%, rgba(1, 87, 155, 0) 80%); */
+    background: rgba(0, 0, 0, 0.2);
 }
