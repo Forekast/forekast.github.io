@@ -12,47 +12,103 @@
     <script src="https://kit.fontawesome.com/1669c8de1f.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="css/mdb-free.css">
+    <link rel="stylesheet" href="css/borders.css">
     <link rel="stylesheet" href="css/main.css">
 
     <style>
         h4 {
             font-style: italic;
         }
+        /* .skillRow li {
+            display: inline;
+            list-style: none;
+        } */
+        .skillRow div {
+            margin-bottom: 0;
+            /* padding-left: 1em; */
+        }
+        .skillRow div::after{
+            content: "\00a0\00a0•\00a0\00a0";
+        }
+        /* .skillRow div:first-of-type::after{
+            content: "";
+        } */
+        .skillRow div:last-of-type::after{
+            content: "";
+        }
+        h3, h2, h1 {
+            margin-bottom: 0;
+            line-height: 1.3rem;
+        }
     </style>
 
 </head>
 
-<body class="light-blue darken-3 text-white">
+<body class="light-blue darken-2 text-white">
 
-    <div class="container-fluid p-0 d-none d-sm-none d-md-block bannerContainer sidebar-shadow topbar-gradient">
+    <div class="container-fluid p-0 d-none d-sm-none d-md-block bannerContainer sidebar-shadow gradient-overlay-dark">
         <div class="row topBanner">
             <div class="col">
                 <div>Mak Mendelson</div>
                 <div class="navHeaderSubtext">UI / UX / Visual & Graphic Design</div>
             </div>
+            <div class="col text-right align-self-center">
+                <button type="button" class="btn btn-outline-light btn-lg rounded" onclick="downloadResume()"><i class="far fa-file-pdf pr-2"></i>My Resume</button>
+            </div>
         </div>
         <div class="unique-color-dark pb-1"></div>
     </div>
     <div class="container-fluid p-0">
-        <nav id="navigationMenu" class="sidebar navbar font-weight-bold text-white light-blue darken-2 sidebar-shadow navbar-gradient">
+        <nav id="navigationMenu" class="sidebar navbar font-weight-bold text-white light-blue darken-2 sidebar-shadow gradient-overlay-light">
             <div class="navbar-brand navHeader d-md-none">
                 <div>Mak Mendelson</div>
                 <div class="navHeaderSubtext">UI / UX / Visual & Graphic Design</div>
             </div>
-            <nav id="navButtons" class="nav text-white-50 border-top border-light">
-                <a class="nav-link" href="#s01">Section 1</a>
+            <nav id="navButtons" class="nav text-white-50 border-md-top border-light">
+                <a class="nav-link" href="#s01">Skills</a>
                 <a class="nav-link" href="#s02">Section 2</a>
                 <a class="nav-link" href="#s03">Section 3</a>
                 <a class="nav-link" href="#s04">Section 4</a>
             </nav>
         </nav>
+        <div class="d-md-none w-100 p-1">
+            <button type="button" class="btn btn-outline-light rounded btn-block" onclick="downloadResume()"><i class="far fa-file-pdf pr-2"></i>Download my
+                Resume</button>
+        </div>
 
-        <div class="content light-blue darken-4 body-gradient" data-spy="scroll" data-target="#navigationMenu" data-offset="10">
+        <div class="content light-blue darken-4 gradient-overlay-dark" data-spy="scroll" data-target="#navigationMenu" data-offset="10">
 
             <div id="s01" class="py-4">
-                <h4>Section 1</h4>
-                <div class="w-100 body-gradient-inner" style="height:500px;"></div>
+                <h4>Skills</h4>
+                <div class="w-100 body-gradient-inner">
+                    <div class="container-fluid py-4">
+                        <h2 class="uppercase font-italic opacity-25 font-weight-bold position-absolute">UI/UX</h2>
+                        <div class="row justify-content-center skillRow pb-3 px-4">
+                            <div class="col-4-lg col-4-xs">User Interface Design</div>
+                            <div class="col-4-lg col-4-xs">User Experience Design</div>
+                            <div class="col-4-lg col-4-xs">User Experience Testing</div>
+                            <div class="col-4-lg col-4-xs">Product Development</div>
+                            <div class="col-4-lg col-4-xs">Game Development</div>
+                        </div>
+                        <h2 class="uppercase font-italic opacity-25 font-weight-bold position-absolute">Design</h2>
+                        <div class="row justify-content-center skillRow pb-3 px-4">
+                            <div class="col-4-lg col-4-xs">Adobe Illustrator</div>
+                            <div class="col-4-lg col-4-xs">Game Design</div>
+                            <div class="col-4-lg col-4-xs">Graphic Design</div>
+                            <div class="col-4-lg col-4-xs">Logo Design & Branding</div>
+                            <div class="col-4-lg col-4-xs">Business Cards & Stationary</div>
+                        </div>
+                        <h2 class="uppercase font-italic opacity-25 font-weight-bold position-absolute">Art</h2>
+                        <div class="row justify-content-center skillRow px-4">
+                            <div class="col-4-lg col-4-xs">Adobe Photoshop</div>
+                            <div class="col-4-lg col-4-xs">Digital Painting</div>
+                            <div class="col-4-lg col-4-xs">Concept Art</div>
+                            <div class="col-4-lg col-4-xs">Blender</div>
+                            <div class="col-4-lg col-4-xs">Animation</div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div id="s02" class="py-4">
                 <h4>Section 2</h4>
@@ -76,6 +132,7 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/mdb.min.js"></script>
+
     <script src="js/main.js"></script>
 </body>
 
