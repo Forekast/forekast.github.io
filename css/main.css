@@ -31,6 +31,10 @@ a {
     color: #0b5394 !important;
 }
 
+.light-blue.darken-6 {
+    color: #1d4564 !important
+}
+
 .bg-dark-blue-2 {
     background-color: #0b5394 !important;
 }
@@ -87,6 +91,7 @@ a {
 
 .bannerContainer {
     position: sticky;
+    z-index: 1001;
 }
 
 .topBanner {
@@ -204,4 +209,13 @@ a {
 
 .gradient-overlay-dark {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.gradient-overlay-dark-2 {
+    /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 20%, rgba(0, 0, 0, 0.) 100%); */
+    background: linear-gradient(180deg, rgba(30, 0, 30, 0.3) 20%, rgba(30, 0, 30, 0.5) 100%);
+}
+
+#post-spacing {
+    height: 50vh;
 }

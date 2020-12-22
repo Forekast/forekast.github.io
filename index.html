@@ -11,8 +11,12 @@
 
     <script src="https://kit.fontawesome.com/1669c8de1f.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/mdb-free.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mdb-free.css"> -->
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/borders.css">
     <link rel="stylesheet" href="css/main.css">
 
@@ -20,6 +24,7 @@
         h4 {
             font-style: italic;
         }
+
         /* .skillRow li {
             display: inline;
             list-style: none;
@@ -28,19 +33,25 @@
             margin-bottom: 0;
             /* padding-left: 1em; */
         }
-        .skillRow div::after{
+
+        .skillRow div::after {
             content: "\00a0\00a0•\00a0\00a0";
         }
+
         /* .skillRow div:first-of-type::after{
             content: "";
         } */
-        .skillRow div:last-of-type::after{
+        .skillRow div:last-of-type::after {
             content: "";
         }
-        h3, h2, h1 {
+
+        h3,
+        h2,
+        h1 {
             margin-bottom: 0;
             line-height: 1.3rem;
         }
+
         .w-px-150 {
             width: 150px;
             max-width: 150px;
@@ -58,13 +69,15 @@
                 <div class="navHeaderSubtext">UI / UX / Visual & Graphic Design</div>
             </div>
             <div class="col text-right align-self-center">
-                <button type="button" class="btn btn-outline-light btn-lg rounded" onclick="downloadResume()"><i class="far fa-file-pdf pr-2"></i>My Resume</button>
+                <button type="button" class="btn btn-outline-light btn-lg rounded" onclick="downloadResume()"><i
+                        class="far fa-file-pdf pr-2"></i>My Resume</button>
             </div>
         </div>
         <div class="unique-color-dark pb-1"></div>
     </div>
     <div class="container-fluid p-0">
-        <nav id="navigationMenu" class="sidebar navbar font-weight-bold text-white light-blue darken-2 sidebar-shadow gradient-overlay-light">
+        <nav id="navigationMenu"
+            class="sidebar navbar font-weight-bold text-white light-blue darken-2 sidebar-shadow gradient-overlay-light">
             <div class="navbar-brand navHeader d-md-none">
                 <div>Mak Mendelson</div>
                 <div class="navHeaderSubtext">UI / UX / Visual & Graphic Design</div>
@@ -77,11 +90,13 @@
             </nav>
         </nav>
         <div class="d-md-none w-100 p-1">
-            <button type="button" class="btn btn-outline-light rounded btn-block" onclick="downloadResume()"><i class="far fa-file-pdf pr-2"></i>Download my
+            <button type="button" class="btn btn-outline-light rounded btn-block" onclick="downloadResume()"><i
+                    class="far fa-file-pdf pr-2"></i>Download my
                 Resume</button>
         </div>
 
-        <div class="content light-blue darken-4 gradient-overlay-dark" data-spy="scroll" data-target="#navigationMenu" data-offset="10">
+        <div class="content light-blue darken-4 gradient-overlay-dark-2" data-spy="scroll" data-target="#navigationMenu"
+            data-offset="10">
 
             <div id="s01" class="py-4">
                 <h4>Skills</h4>
@@ -94,7 +109,8 @@
                             <div class="col d-flex flex-wrap justify-content-start skillRow pb-3 px-4">
                                 <div class="col-4-lg col-4-xs">User Interface Design</div>
                                 <div class="col-4-lg col-4-xs">User Experience Design</div>
-                                <div class="col-4-lg col-4-xs">User Experience Testing</div>
+                                <div class="col-4-lg col-4-xs">Usability</div>
+                                <div class="col-4-lg col-4-xs">UX Testing</div>
                                 <div class="col-4-lg col-4-xs">Product Development</div>
                                 <div class="col-4-lg col-4-xs">Game Development</div>
                             </div>
@@ -105,22 +121,35 @@
                             </div>
                             <div class="col d-flex flex-wrap justify-content-start skillRow pb-3 px-4">
                                 <div class="col-4-lg col-4-xs">Adobe Illustrator</div>
-                                <div class="col-4-lg col-4-xs">Game Design</div>
                                 <div class="col-4-lg col-4-xs">Graphic Design</div>
-                                <div class="col-4-lg col-4-xs">Logo Design & Branding</div>
-                                <div class="col-4-lg col-4-xs">Business Cards & Stationary</div>
+                                <div class="col-4-lg col-4-xs">Wireframing</div>
+                                <div class="col-4-lg col-4-xs">Front-End Web Design</div>
+                                <div class="col-4-lg col-4-xs">Game Design</div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col w-px-150">
                                 <h2 class="uppercase font-italic opacity-25 font-weight-bold">Art</h2>
                             </div>
-                            <div class="col d-flex flex-wrap justify-content-start skillRow px-4">
+                            <div class="col d-flex flex-wrap justify-content-start skillRow pb-3 px-4">
                                 <div class="col-4-lg col-4-xs">Adobe Photoshop</div>
+                                <div class="col-4-lg col-4-xs">Logos & Branding</div>
+                                <div class="col-4-lg col-4-xs">Business Cards & Stationary</div>
                                 <div class="col-4-lg col-4-xs">Digital Painting</div>
                                 <div class="col-4-lg col-4-xs">Concept Art</div>
-                                <div class="col-4-lg col-4-xs">Blender</div>
-                                <div class="col-4-lg col-4-xs">Animation</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col w-px-150">
+                                <h2 class="uppercase font-italic opacity-25 font-weight-bold">Tech</h2>
+                            </div>
+                            <div class="col d-flex flex-wrap justify-content-start skillRow px-4">
+                                <div class="col-4-lg col-4-xs">Git/Version-Control</div>
+                                <div class="col-4-lg col-4-xs">HTML</div>
+                                <div class="col-4-lg col-4-xs">CSS</div>
+                                <div class="col-4-lg col-4-xs">Javascript</div>
+                                <div class="col-4-lg col-4-xs">Bootstrap</div>
+                                <div class="col-4-lg col-4-xs">jQuery</div>
                             </div>
                         </div>
                     </div>
@@ -128,7 +157,22 @@
             </div>
             <div id="s02" class="py-4">
                 <h4>Web Applications</h4>
-                <div class="w-100 body-gradient-inner" style="height:500px;"></div>
+                <div class="w-100 body-gradient-inner pt-4" style="height:500px;">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card bg-light">
+                                    <img class="card-img-top" src="..." alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark">Card title</h5>
+                                        <p class="card-text">Some quick example text</p>
+                                        <a href="#" class="btn btn-primary">Open Gallery</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div id="s03" class="py-4">
                 <h4>Designs & Materials</h4>
@@ -139,15 +183,20 @@
                 <div class="w-100 body-gradient-inner" style="height:500px;"></div>
             </div>
 
-            <div style="height:600px;"></div>
+            <div id="post-spacing"></div>
         </div>
 
     </div>
 
-    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/mdb.min.js"></script>
+    <script src="js/mdb.min.js"></script> -->
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
 
     <script src="js/main.js"></script>
 </body>
