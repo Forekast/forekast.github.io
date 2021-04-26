@@ -207,6 +207,10 @@ a {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0) 100%);
 }
 
+.gradient-overlay-light-2 {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 20%, rgba(255, 255, 255, 0.2) 100%);
+}
+
 .gradient-overlay-dark {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.1) 100%);
 }
