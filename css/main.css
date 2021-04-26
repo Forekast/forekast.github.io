@@ -60,10 +60,10 @@ a {
     color: white;
 }
 
-.sidebar a:hover:not(.active) {
+/* .sidebar a:hover:not(.active) {
     background-color: #03a9f4;
     color: white;
-}
+} */
 
 .content {
     margin-left: 200px;

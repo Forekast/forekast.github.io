@@ -1,0 +1,23 @@
+
+
+// Overrides go before the bootstrap import
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+$testcolor : cyan;
+
+.bannerContainer {
+    background-color: $cyan-600;
+}
+#navigationMenu {
+    background-color: $cyan-900;
+}
+.content {
+    background-color: $cyan-400;
+}
+.sidebar a:hover:not(.active) {
+    background-color: $cyan-400;
+    color: $white;
+}
+a {
+    color: inherit;
+}

@@ -15,10 +15,12 @@
     <link rel="stylesheet" href="css/mdb-free.css"> -->
 
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/borders.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/my-project.css">
 
     <style>
         h4 {
@@ -60,7 +62,7 @@
 
 </head>
 
-<body class="light-blue darken-2 text-white">
+<body class="text-white">
 
     <div class="container-fluid p-0 d-none d-sm-none d-md-block bannerContainer sidebar-shadow gradient-overlay-dark">
         <div class="row topBanner">
@@ -68,34 +70,35 @@
                 <div>Mak Mendelson</div>
                 <div class="navHeaderSubtext">UI / UX / Visual & Graphic Design</div>
             </div>
-            <div class="col text-right align-self-center">
+            <div class="col text-end align-self-center">
                 <button type="button" class="btn btn-outline-light btn-lg rounded" onclick="downloadResume()"><i
-                        class="far fa-file-pdf pr-2"></i>My Resume</button>
+                        class="far fa-file-pdf pe-2"></i>My Resume</button>
             </div>
         </div>
         <div class="unique-color-dark pb-1"></div>
     </div>
     <div class="container-fluid p-0">
         <nav id="navigationMenu"
-            class="sidebar navbar font-weight-bold text-white light-blue darken-2 sidebar-shadow gradient-overlay-light">
-            <div class="navbar-brand navHeader d-md-none">
-                <div>Mak Mendelson</div>
-                <div class="navHeaderSubtext">UI / UX / Visual & Graphic Design</div>
+            class="sidebar font-weight-bold text-white sidebar-shadow gradient-overlay-light">
+            <div class="container-fluid p-0 m-0">
+                <div class="navbar-brand navHeader d-md-none">
+                    <div>Mak Mendelson</div>
+                    <div class="navHeaderSubtext">UI / UX / Visual & Graphic Design</div>
+                </div>
+                <nav id="navButtons" class="nav text-white-50">
+                    <a class="nav-link" href="#s01">Skills</a>
+                    <a class="nav-link" href="#s02">Web Apps</a>
+                    <a class="nav-link" href="#s03">Design</a>
+                    <a class="nav-link" href="#s04">Games & Art</a>
+                </nav>
             </div>
-            <nav id="navButtons" class="nav text-white-50 border-md-top border-light">
-                <a class="nav-link" href="#s01">Skills</a>
-                <a class="nav-link" href="#s02">Web Apps</a>
-                <a class="nav-link" href="#s03">Design</a>
-                <a class="nav-link" href="#s04">Games & Art</a>
-            </nav>
         </nav>
-        <div class="d-md-none w-100 p-1">
+        <div class="d-md-none w-100 p-1 bannerContainer gradient-overlay-dark-2 d-grid gap-2">
             <button type="button" class="btn btn-outline-light rounded btn-block" onclick="downloadResume()"><i
-                    class="far fa-file-pdf pr-2"></i>Download my
-                Resume</button>
+                    class="far fa-file-pdf pe-2"></i>Download my Resume</button>
         </div>
 
-        <div class="content light-blue darken-4 gradient-overlay-dark-2" data-spy="scroll" data-target="#navigationMenu"
+        <div class="content primary gradient-overlay-dark-2" data-spy="scroll" data-target="#navigationMenu"
             data-offset="10">
 
             <div id="s01" class="py-4">
