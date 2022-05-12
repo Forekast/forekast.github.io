@@ -3,25 +3,32 @@
 // Overrides go before the bootstrap import
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-$testcolor : cyan;
+$testcolor : #3d85c6;
 
 .bannerContainer {
-    background-color: $cyan-600;
+    background-color: $testcolor;
+}
+.shadow-3D {
+    background-color: shade-color($testcolor, 50%);
+}
+.light-3D {
+    background-color: tint-color($testcolor, 20%);
 }
 #navigationMenu {
-    background-color: $cyan-900;
+    background-color: shade-color($testcolor, 80%);
 }
 .content {
-    background-color: $cyan-400;
+    background-color: shade-color($testcolor, 20%);
+    // background-color: tint-color($testcolor, 80%);
 }
 .sidebar a:hover:not(.active) {
-    background-color: $cyan-400;
+    background-color: tint-color($testcolor, 20%);
     color: $white;
 }
 a {
     color: inherit;
 }
 .card {
-    // background-color: $cyan-100;
-    background-color: $cyan-900;
+    // background-color: $blue-100;
+    background-color: shade-color($testcolor, 80%);
 }

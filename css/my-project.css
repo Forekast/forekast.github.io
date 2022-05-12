@@ -11303,19 +11303,27 @@ fieldset:disabled .btn {
 }
 
 .bannerContainer {
-  background-color: #0aa2c0;
+  background-color: #3d85c6;
+}
+
+.shadow-3D {
+  background-color: #1f4363;
+}
+
+.light-3D {
+  background-color: #649dd1;
 }
 
 #navigationMenu {
-  background-color: #032830;
+  background-color: #0c1b28;
 }
 
 .content {
-  background-color: #3dd5f3;
+  background-color: #316a9e;
 }
 
 .sidebar a:hover:not(.active) {
-  background-color: #3dd5f3;
+  background-color: #649dd1;
   color: #fff;
 }
 
@@ -11324,6 +11332,6 @@ a {
 }
 
 .card {
-  background-color: #032830;
+  background-color: #0c1b28;
 }
 /*# sourceMappingURL=my-project.css.map */
