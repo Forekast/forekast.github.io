@@ -25,10 +25,29 @@ $testcolor : #3d85c6;
     background-color: tint-color($testcolor, 20%);
     color: $white;
 }
-a {
-    color: inherit;
+.sidebar a {
+    color: $testcolor;
 }
 .card {
     // background-color: $blue-100;
     background-color: shade-color($testcolor, 80%);
+}
+
+* {
+    scrollbar-color: tint-color($testcolor, 10%) shade-color($testcolor, 60%);
+}
+*::-webkit-scrollbar {
+    width: auto;
+}
+.section {
+    scrollbar-width: thin;
+}
+.section::-webkit-scrollbar {
+    width: 12px;
+}
+*::-webkit-scrollbar-track {
+    background: shade-color($testcolor, 60%);
+}
+*::-webkit-scrollbar-thumb {
+    background-color: tint-color($testcolor, 10%);
 }

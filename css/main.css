@@ -68,8 +68,13 @@ a {
 .content {
     margin-left: 200px;
     padding: 1px 16px;
-    height: calc(100vh - 6.58em);
+    height: calc(100vh - 6.50em);
     position: relative;
+    overflow-y: scroll;
+}
+
+.section {
+    height: 500px;
     overflow-y: scroll;
 }
 
@@ -220,7 +225,7 @@ a {
 } */
 
 #post-spacing {
-    height: 50vh;
+    height: 41vh;
 }
 
 .pb-0-1 {

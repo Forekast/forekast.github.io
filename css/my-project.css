@@ -11327,11 +11327,35 @@ fieldset:disabled .btn {
   color: #fff;
 }
 
-a {
-  color: inherit;
+.sidebar a {
+  color: #3d85c6;
 }
 
 .card {
   background-color: #0c1b28;
+}
+
+* {
+  scrollbar-color: #5091cc #18354f;
+}
+
+*::-webkit-scrollbar {
+  width: auto;
+}
+
+.section {
+  scrollbar-width: thin;
+}
+
+.section::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #18354f;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #5091cc;
 }
 /*# sourceMappingURL=my-project.css.map */
