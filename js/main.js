@@ -18,7 +18,7 @@ let portfolioSection = new Array();
 
 
 function downloadResume() {
-  window.open("docs/2019.09_MakMendelson_Resume.pdf#zoom=100", "_blank");
+  window.open("docs/2024.10_MakMendelson_Resume.pdf#zoom=100", "_blank");
 }
 
 // Run functions from inside this, when needing the use the directory
