@@ -18,10 +18,12 @@
 	<noscript>
 		<link rel="stylesheet" href="assets/noscript.css" />
 	</noscript>
+	<script src="https://kit.fontawesome.com/1669c8de1f.js" crossorigin="anonymous"></script>
 	<!-- qweoqwupeoiqwuewqe -->
 	<style>
 		html {
 			scrollbar-color: #5091cc #18354f;
+			scrollbar-width: thin;
 		}
 
 		#gallery-modal {
@@ -37,10 +39,145 @@
 
 		#container04 {
 			position: fixed !important;
-			z-index: 99;
+			z-index: 101;
 			top: 0;
 			left: 0;
 			border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+		}
+
+		.hideme {
+			visibility: hidden;
+			height: 0;
+		}
+
+		.casestudy-component {
+			position: relative;
+		}
+
+		.casestudy-btn {
+			position: absolute;
+			top: 6px;
+			right: 12px;
+			border-radius: 3px;
+			color: #EEEEEE;
+			background-color: rgba(0, 0, 0, 0);
+			border: none;
+			/* padding: 0.2rem 1rem; */
+			padding: 0.65rem 1rem;
+			z-index: 100;
+			transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, content 0.25 ease;
+		}
+
+		.casestudy-btn::before {
+			font-family: "Font Awesome 6 Sharp";
+			font-style: normal;
+			font-weight: 900;
+			font-size: 1.5rem;
+			/* content: "\f078"; */
+			/* content: "\f0d7"; */
+			content: "\f103";
+		}
+
+		.casestudy-btn:hover {
+			border-color: #EEEEEE !important;
+			background-color: #EEEEEE !important;
+			color: rgb(48, 65, 142) !important;
+			cursor: pointer;
+		}
+
+		.casestudy {
+			max-height: 3.75rem;
+			overflow-x: hidden;
+			overflow-y: hidden;
+			scrollbar-color: #5091cc #18354f;
+			scrollbar-width: thin;
+			font-family: 'Roboto Serif', serif;
+			color: rgba(255, 255, 255, 0.933);
+			text-align: start;
+			padding: 1rem 2rem;
+			line-height: 1.6rem;
+			margin-bottom: 2rem !important;
+		}
+
+		.casestudy.expanded {
+			max-height: calc(100vh - 24rem);
+			max-height: 75vh;
+			overflow-y: scroll;
+		}
+
+		.casestudy.expanded+.casestudy-btn::before {
+			content: "\f102";
+		}
+
+		.casestudy ul {
+			padding-left: 1.3rem;
+		}
+
+		.casestudy li {
+			list-style-type: circle;
+			list-style-position: outside;
+			padding-left: 0.4rem;
+		}
+
+		.project-header {
+			font-size: 1.3rem !important;
+		}
+
+		hr {
+			border-top: 1px solid rgba(0, 0, 0, 0.5);
+			border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+			margin: 1em 0;
+			padding: 0;
+		}
+
+		h1 {
+			font-size: 1.5rem;
+			color: rgba(255, 246, 196, 0.941);
+			font-family: 'Quattrocento Sans', sans-serif;
+			letter-spacing: 0.025rem;
+			font-variant: small-caps;
+		}
+
+		h2 {
+			font-size: 1.3rem;
+			color: rgba(255, 246, 196, 0.941);
+			font-family: 'Quattrocento Sans', sans-serif;
+			letter-spacing: 0.025rem;
+			font-variant: small-caps;
+		}
+
+		h3 {
+			font-size: 1.1rem;
+			color: rgba(255, 246, 196, 0.941);
+			font-family: 'Quattrocento Sans', sans-serif;
+			letter-spacing: 0.025rem;
+			font-variant: small-caps;
+		}
+
+		p,
+		ul {
+			margin-bottom: 0.3rem;
+		}
+
+		section h1 {
+			margin-bottom: 0.6rem;
+			font-weight: 600;
+			display: inline-block;
+		}
+
+		section h1+p {
+			display: inline-block;
+			font-size: 1.2rem;
+		}
+
+		section h2 {
+			margin-bottom: 0.6rem;
+			font-weight: 600;
+		}
+
+		section h3 {
+			margin-top: 0.5rem;
+			margin-bottom: 0.3rem;
 		}
 
 		@media only screen and (max-width: 768px) {
@@ -63,10 +200,10 @@
 								<p id="text03"><span class="p">UI / UX / Front-end / Graphic &amp; Product Designer<br />Software Developer</span></p>
 								<ul id="buttons02" class="buttons">
 									<li>
-										<a href="#design" class="button n01" role="button">Design</a>
+										<a href="#webapps" class="button n02" role="button">Web Apps</a>
 									</li>
 									<li>
-										<a href="#webapps" class="button n02" role="button">Web Apps</a>
+										<a href="#design" class="button n01" role="button">Design</a>
 									</li>
 									<li>
 										<a href="#gamesart" class="button n03" role="button">Games &amp; Art</a>
@@ -76,17 +213,677 @@
 							<div>
 								<ul id="buttons01" class="buttons">
 									<li>
-										<a href="https://drive.google.com/file/d/1wZQAO3XUN4q9V0kFnipTeMztxDdeASVE/view?usp=sharing/" target="_blank" class="button n01" role="button"><svg aria-labelledby="buttons01-icon-1-title">
+										<a rel="noopener" href="https://drive.google.com/file/d/1wZQAO3XUN4q9V0kFnipTeMztxDdeASVE/view?usp=sharing/" target="_blank" class="button n01" role="button"><svg aria-labelledby="buttons01-icon-1-title">
 												<title id="buttons01-icon-1-title">CV</title>
 												<use xlink:href="assets/icons.svg#cv"></use>
-											</svg><span class="label">My Resume</span></a>
+											</svg><span class="label">CV / Resume</span></a>
 									</li>
 								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div id="container07" data-scroll-id="design" data-scroll-behavior="default" data-scroll-offset="-6" data-scroll-speed="3" data-scroll-invisible="1" class="container default full">
+
+				<div id="container07" data-scroll-id="webapps" data-scroll-behavior="default" data-scroll-offset="-6" data-scroll-speed="3" data-scroll-invisible="1" class="container default full">
+					<div class="wrapper">
+						<div class="inner">
+						</div>
+					</div>
+				</div>
+				<div id="container03" class="container default full">
+					<div class="wrapper">
+						<div class="inner">
+							<h2 id="text14">Web Applications</h2>
+							<div class="hideme">
+								<p id="text11">COR &amp; PM Portals</p>
+								<div id="gallery02" class="gallery">
+									<div class="inner">
+										<ul>
+											<li>
+												<a href="assets/images/gallery02/7d1fa70f_original.jpg" class="thumbnail n01"><span class="frame"><img src="assets/images/gallery02/7d1fa70f.jpg" alt="Create New" data-caption="Create New" /></span></a>
+												<div class="caption">
+													<p>Create New</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery02/453499c8_original.jpg" class="thumbnail n02"><span class="frame"><img src="assets/images/gallery02/453499c8.jpg" alt="Edit" data-caption="Edit" /></span></a>
+												<div class="caption">
+													<p>Edit</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery02/3fee5a92_original.jpg" class="thumbnail n03"><span class="frame"><img src="assets/images/gallery02/3fee5a92.jpg" alt="View Contract Details 1" data-caption="View Contract Details 1" /></span></a>
+												<div class="caption">
+													<p>View Contract Details 1</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery02/dfb2d995_original.jpg" class="thumbnail n04"><span class="frame"><img src="assets/images/gallery02/dfb2d995.jpg" alt="View Contract Details 2" data-caption="View Contract Details 2" /></span></a>
+												<div class="caption">
+													<p>View Contract Details 2</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery02/50ddc6ea_original.jpg" class="thumbnail n05"><span class="frame"><img src="assets/images/gallery02/50ddc6ea.jpg" alt="Invitee Search" data-caption="Invitee Search" /></span></a>
+												<div class="caption">
+													<p>Invitee Search</p>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<p class="project-header" id="text01">Applicant Dashboard</p>
+								<div id="gallery05" class="gallery">
+									<div class="inner">
+										<ul>
+											<li>
+												<a href="assets/images/gallery05/b81fa610_original.jpg" class="thumbnail n01"><span class="frame"><img src="assets/images/gallery05/b81fa610.jpg" alt="GOA Home / Dashboard" data-caption="GOA Home / Dashboard" /></span></a>
+												<div class="caption">
+													<p>GOA Home / Dashboard</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery05/e6cc51b9_original.jpg" class="thumbnail n02"><span class="frame"><img src="assets/images/gallery05/e6cc51b9.jpg" alt="Case Search Context Menu" data-caption="Case Search Context Menu" /></span></a>
+												<div class="caption">
+													<p>Case Search Context Menu</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery05/4ffc7e65_original.jpg" class="thumbnail n03"><span class="frame"><img src="assets/images/gallery05/4ffc7e65.jpg" alt="Case View" data-caption="Case View" /></span></a>
+												<div class="caption">
+													<p>Case View</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery05/478ada13_original.jpg" class="thumbnail n04"><span class="frame"><img src="assets/images/gallery05/478ada13.jpg" alt="Documents View" data-caption="Documents View" /></span></a>
+												<div class="caption">
+													<p>Documents View</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery05/a7676b84_original.jpg" class="thumbnail n05"><span class="frame"><img src="assets/images/gallery05/a7676b84.jpg" alt="Adjudicator&amp;#39;s Workbook" data-caption="Adjudicator&amp;#39;s Workbook" /></span></a>
+												<div class="caption">
+													<p>Adjudicator&#39;s Workbook</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery05/737e957f_original.jpg" class="thumbnail n06"><span class="frame"><img src="assets/images/gallery05/737e957f.jpg" alt="TSA Pre - PreCheck" data-caption="TSA Pre - PreCheck" /></span></a>
+												<div class="caption">
+													<p>TSA Pre - PreCheck</p>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="project-container">
+								<p class="project-header" id="text18"><em>The Verified</em> Web App Mock-Up</p>
+								<div id="gallery04" class="gallery">
+									<div class="inner">
+										<ul>
+											<li>
+												<a href="assets/images/gallery04/fca6a894_original.png" class="thumbnail n01"><span class="frame deferred"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCA4NTUgNTcwIiB3aWR0aD0iODU1IiBoZWlnaHQ9IjU3MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI%2BPHJlY3QgZmlsbD0idHJhbnNwYXJlbnQiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiLz48L3N2Zz4%3D" data-src="assets/images/gallery04/fca6a894.png" alt="Login Screen" data-caption="Login Screen" /></span></a>
+												<div class="caption">
+													<p>Login Screen</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery04/fa33e09c_original.png" class="thumbnail n02"><span class="frame deferred"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCA4NTUgNTcwIiB3aWR0aD0iODU1IiBoZWlnaHQ9IjU3MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI%2BPHJlY3QgZmlsbD0idHJhbnNwYXJlbnQiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiLz48L3N2Zz4%3D" data-src="assets/images/gallery04/fa33e09c.png" alt="Products / Tiers" data-caption="Products / Tiers" /></span></a>
+												<div class="caption">
+													<p>Products / Tiers</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery04/52171949_original.png" class="thumbnail n03"><span class="frame"><img src="assets/images/gallery04/52171949.png" alt="Running Data Checks" data-caption="Running Data Checks" /></span></a>
+												<div class="caption">
+													<p>Running Data Checks</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery04/5d632258_original.png" class="thumbnail n04"><span class="frame deferred"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCA4NTUgNTcwIiB3aWR0aD0iODU1IiBoZWlnaHQ9IjU3MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI%2BPHJlY3QgZmlsbD0idHJhbnNwYXJlbnQiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiLz48L3N2Zz4%3D" data-src="assets/images/gallery04/5d632258.png" alt="Account &amp;amp; Credential Details" data-caption="Account &amp;amp; Credential Details" /></span></a>
+												<div class="caption">
+													<p>Account &amp; Credential Details</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery04/a0d12ebc_original.png" class="thumbnail n05"><span class="frame"><img src="assets/images/gallery04/a0d12ebc.png" alt="Hotel Employee Credentials" data-caption="Hotel Employee Credentials" /></span></a>
+												<div class="caption">
+													<p>Hotel Employee Credentials</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery04/f6bd599e_original.png" class="thumbnail n06"><span class="frame"><img src="assets/images/gallery04/f6bd599e.png" alt="Member Hotels" data-caption="Member Hotels" /></span></a>
+												<div class="caption">
+													<p>Member Hotels</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery04/29b33c1f_original.png" class="thumbnail n07"><span class="frame"><img src="assets/images/gallery04/29b33c1f.png" alt="Hotel Service Vendors" data-caption="Hotel Service Vendors" /></span></a>
+												<div class="caption">
+													<p>Hotel Service Vendors</p>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="casestudy-component">
+									<div id="gallery04-CaseStudy" class="casestudy">
+										<section>
+											<h1>Project Overview</h1>
+											<p> — <strong><em>The Verified</em></strong></p>
+											<p><strong>Product:</strong> Credential Verification Platform</p>
+											<p><strong>Example Client:</strong> American Hotel & Lodging Association (AHLA)</p>
+											<p><strong>Platform:</strong> Web application</p>
+											<p><strong>Goal:</strong></p>
+											<div>
+												<div>Design a scalable credential verification platform with:</div>
+												<ul>
+													<li>Tiered employee vetting packages (Bronze → Platinum)</li>
+													<li>A customizable management dashboard for clients like the AHLA to view verified personnel</li>
+													<li>Trust Badges that signify successful credential validation</li>
+												</ul>
+											</div>
+										</section>
+										<hr />
+										<section>
+											<h2>The Problem</h2>
+											<p>Organizations across industries — including hospitality, healthcare, and logistics — need a flexible way to verify and manage employee trustworthiness.</p>
+											<p>Without an aggregating platform, verifying sensitive attributes like criminal background, financial history, or protected data access is inconsistent and often manual. The AHLA, for example, required a way to validate credentials across both internal hotel staff and third-party service vendors.</p>
+										</section>
+										<hr />
+										<section>
+											<h2>Objectives</h2>
+											<ul>
+												<li>Design a core platform (<em>The Verified</em>) that supports white-labeled deployment for multiple client organizations</li>
+												<li>Allow organizations to:
+													<ul>
+														<li>Select and purchase tiered credentialing packages</li>
+														<li>Manage employees and vendor contacts</li>
+														<li>Issue <strong>Trust Badges</strong> upon verification completion</li>
+													</ul>
+												</li>
+												<li>Provide a dashboard to sort, view, and export verified personnel data</li>
+											</ul>
+										</section>
+										<hr />
+										<section>
+											<h2>My Role</h2>
+											<p><strong>UX/UI Designer</strong></p>
+											<ul>
+												<li>Defined cross-client architecture and user flows</li>
+												<li>Created reusable components and visual language for badge-based trust indicators</li>
+												<li>Designed dashboard interfaces for personnel and vendor management</li>
+												<li>Helped shape positioning of <em>The Verified</em> as a modular platform serving various industries</li>
+											</ul>
+										</section>
+										<hr />
+										<section>
+											<h2>Design Process</h2>
+
+											<h3>Research & Discovery</h3>
+											<ul>
+												<li>Conducted stakeholder interviews to define credentialing standards by tier</li>
+												<li>Validated the need for scalable deployment and customizable UI for different client types</li>
+												<li>Studied existing trust badge systems for visual clarity and end-user comprehension</li>
+											</ul>
+
+											<h3>UX Design</h3>
+											<ul>
+												<li>Mapped flows for account registration, subscription, and credential review</li>
+												<li>Developed role-based access (admins vs. viewers) for internal org hierarchies</li>
+												<li>Streamlined verification status tracking and badge generation</li>
+											</ul>
+
+											<h3>UI Design</h3>
+											<ul>
+												<li>Created a tiered badge system (Bronze, Silver, Gold, Platinum) to indicate verification depth</li>
+												<li>Incorporated LinkedIn badge generation and support contact touchpoints</li>
+												<li>Designed visually balanced layouts for subscription selection, credential breakdowns, and dashboard reports</li>
+												<li>Prioritized responsive, accessible design</li>
+											</ul>
+										</section>
+										<hr />
+										<section>
+											<h2>Key Screens</h2>
+
+											<h3>1. Login & Registration</h3>
+											<p>Clean, branded login experience adaptable for different organizations</p>
+
+											<h3>2. Product Tier Selection</h3>
+											<p>Breakdown of verification tiers:</p>
+											<ul>
+												<li>Coverage areas</li>
+												<li>Lookback periods</li>
+												<li>Monthly pricing</li>
+											</ul>
+											<p>Allows clients to choose the right level of depth for each employee type</p>
+
+											<h3>3. Credential Activation</h3>
+											<ul>
+												<li>Confirmation screen after subscription</li>
+												<li>Status message ("Running Data Checks...")</li>
+												<li>Summary of included verifications</li>
+											</ul>
+
+											<h3>4. Credential Viewer</h3>
+											<ul>
+												<li>Tabbed layout for personal, financial, and behavioral categories</li>
+												<li>Option to flag discrepancies or generate <strong>Trust Badges</strong> for verified profiles</li>
+											</ul>
+
+											<h3>5. Admin Dashboards</h3>
+											<p><strong>AHLA Example:</strong></p>
+											<ul>
+												<li>View employees and vendors</li>
+												<li>Badge visibility by level</li>
+												<li>Contact info, department, verification status</li>
+												<li>Exportable reports</li>
+											</ul>
+											<p>Sidebar navigation and badge key for easy orientation</p>
+										</section>
+										<hr />
+										<section>
+											<h2>Projected Outcomes</h2>
+											<ul>
+												<li>Deliver a flexible, modular platform (<em>The Verified</em>) usable across industries</li>
+												<li>Enable clients like AHLA to efficiently manage trust within complex ecosystems</li>
+												<li>Issue <strong>Trust Badges</strong> that serve as public-facing proof of employee vetting</li>
+												<li>Support expansion to vendors and contractors with no loss of consistency</li>
+												<li>Lay groundwork for white-labeled versions tailored to additional clients</li>
+											</ul>
+										</section>
+										<hr />
+										<section>
+											<h2>What's next?</h2>
+											<ul>
+												<li>Add mobile dashboard support for managers in the field</li>
+												<li>Support batch imports for large organizations</li>
+												<li>Expand Trust Badge integrations (e.g., Slack, email signatures)</li>
+												<li>Introduce API support for syncing with HR systems and third-party verification providers</li>
+											</ul>
+										</section>
+									</div>
+									<button class="casestudy-btn" title="Open/Close Toggle"></button>
+								</div>
+							</div>
+							<div class="project-container">
+								<p class="project-header" id="text09">Applicant Dashboard - Form Wizard</p>
+								<div id="gallery09" class="gallery">
+									<div class="inner">
+										<ul>
+											<li>
+												<a href="assets/images/gallery09/ec7c79aa_original.jpg" class="thumbnail n01"><span class="frame"><img src="assets/images/gallery09/ec7c79aa.jpg" alt="Token Login" data-caption="Token Login" /></span></a>
+												<div class="caption">
+													<p>Token Login</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery09/f782d60d_original.jpg" class="thumbnail n02"><span class="frame"><img src="assets/images/gallery09/f782d60d.jpg" alt="Demographic Information" data-caption="Demographic Information" /></span></a>
+												<div class="caption">
+													<p>Demographic Information</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery09/29d32265_original.jpg" class="thumbnail n03"><span class="frame"><img src="assets/images/gallery09/29d32265.jpg" alt="Questionnaire" data-caption="Questionnaire" /></span></a>
+												<div class="caption">
+													<p>Questionnaire</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery09/5d417adb_original.jpg" class="thumbnail n04"><span class="frame"><img src="assets/images/gallery09/5d417adb.jpg" alt="Document Downloads" data-caption="Document Downloads" /></span></a>
+												<div class="caption">
+													<p>Document Downloads</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery09/15f204bd_original.jpg" class="thumbnail n05"><span class="frame"><img src="assets/images/gallery09/15f204bd.jpg" alt="Document Uploads" data-caption="Document Uploads" /></span></a>
+												<div class="caption">
+													<p>Document Uploads</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery09/26966b3e_original.jpg" class="thumbnail n06"><span class="frame"><img src="assets/images/gallery09/26966b3e.jpg" alt="Summary" data-caption="Summary" /></span></a>
+												<div class="caption">
+													<p>Summary</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery09/ef6b607f_original.jpg" class="thumbnail n07"><span class="frame"><img src="assets/images/gallery09/ef6b607f.jpg" alt="Completion Page" data-caption="Completion Page" /></span></a>
+												<div class="caption">
+													<p>Completion Page</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery09/ed9ae183_original.jpg" class="thumbnail n08"><span class="frame"><img src="assets/images/gallery09/ed9ae183.jpg" alt="DHS Dashboard" data-caption="DHS Dashboard" /></span></a>
+												<div class="caption">
+													<p>DHS Dashboard</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery09/7643e3bb_original.jpg" class="thumbnail n09"><span class="frame"><img src="assets/images/gallery09/7643e3bb.jpg" alt="DHS - PDF" data-caption="DHS - PDF" /></span></a>
+												<div class="caption">
+													<p>DHS - PDF</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery09/f5829621_original.jpg" class="thumbnail n10"><span class="frame"><img src="assets/images/gallery09/f5829621.jpg" alt="DHS - Sign PDF" data-caption="DHS - Sign PDF" /></span></a>
+												<div class="caption">
+													<p>DHS - Sign PDF</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery09/8dc39cb2_original.jpg" class="thumbnail n11"><span class="frame"><img src="assets/images/gallery09/8dc39cb2.jpg" alt="DHS - Form View" data-caption="DHS - Form View" /></span></a>
+												<div class="caption">
+													<p>DHS - Form View</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery09/3852c12b_original.jpg" class="thumbnail n12"><span class="frame"><img src="assets/images/gallery09/3852c12b.jpg" alt="Manual Identity Document Authentication Tool" data-caption="Manual Identity Document Authentication Tool" /></span></a>
+												<div class="caption">
+													<p>Manual Identity Document Authentication Tool</p>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="casestudy-component">
+									<div id="gallery09-CaseStudy" class="casestudy">
+										<section>
+											<h1>Project Overview</h1>
+											<p> — <strong><em>Applicant Onboarding Platform</em></strong></p>
+											<p>This project involved the design and development of an <strong>Applicant Onboarding web application</strong> for the purposes of streamlining personnel onboarding workflows across various security-sensitive environments. The platform was designed with <strong>scalability, security, and accessibility</strong> in mind, and has been deployed in both prototype and production stages for early adopters including <strong>TelosID (Telos Corporation)</strong> and the <strong>Department of Homeland Security (DHS)</strong>.</p>
+											<h3><strong>Goals</strong></h3>
+											<div>
+												<div>The primary objective was to create a unified onboarding experience capable of supporting:</div>
+												<ul>
+													<li>New hire processing</li>
+													<li>Collateral and SCI case onboarding</li>
+													<li>Outgoing Visit Requests</li>
+													<li>Security prescreens</li>
+													<li>TSA PreCheck workflows</li>
+												</ul>
+											</div>
+											<div>
+												<div>Key performance metrics:</div>
+												<ul>
+													<li>68% reduction in Days to Bill</li>
+													<li>13× faster Pre-Screen processing than industry average</li>
+													<li>Automated Outgoing Visit Request workflow</li>
+													<li>80% error rate reduction in submitted materials</li>
+												</ul>
+											</div>
+										</section>
+										<hr />
+										<section>
+											<h2>Clients & Use Cases</h2>
+											<p>While the first deployments were for <strong>TelosID (TSA PreCheck)</strong> and <strong>DHS internal processing</strong>, the system was architected to support a variety of clients with customizable branding and workflow configurations.</p>
+											<p>Each client instance could support unique workflows, compliance needs, and documentation requirements while benefiting from the platform’s shared core architecture.</p>
+										</section>
+										<hr />
+										<section>
+											<h2>Research & Discovery</h2>
+											<p>The project began with a deep dive into existing federal onboarding workflows, with a focus on pain points experienced by:</p>
+											<ul>
+												<li>Applicants (e.g. redundant inputs, inaccessible forms, manual uploads)</li>
+												<li>Adjudicators (e.g. slow turnaround, mismatched information, error-prone data)</li>
+												<li>System integrators (e.g. compliance complexity, browser compatibility, legacy systems)</li>
+											</ul>
+										</section>
+										<hr />
+										<section>
+											<h2>My Role</h2>
+											<p>As a <strong>Product Designer</strong> on this project, I:</p>
+											<ul>
+												<li>Created wireframes and information architecture for the applicant journey</li>
+												<li>Designed high-fidelity mockups prioritizing desktop layouts</li>
+												<li>Built a functional prototype to demonstrate user flows and task completion for stakeholders and developers</li>
+												<li>Worked closely with software engineers to implement components via HTML, CSS, and JavaScript</li>
+												<li>Maintained design vision ownership through hands-on contributions to the final front-end</li>
+												<li>Participated in iterative design reviews, usability testing, and accessibility audits</li>
+											</ul>
+										</section>
+										<hr />
+										<section>
+											<h2>UX Design</h2>
+											<ul>
+												<li>Developed a step-by-step guided flow with persistent progress tracking</li>
+												<li>Prioritized form clarity and input validation, minimizing the risk of user errors</li>
+												<li>Streamlined complex legal and identity verification steps into digestible, sequential tasks</li>
+												<li>Advocated for early and consistent accessibility testing, aligned with Section 508</li>
+											</ul>
+										</section>
+										<hr />
+										<section>
+											<h2>UI Design</h2>
+											<ul>
+												<li>Delivered clean, accessible UI components that met Section 508, WCAG, and W3C standards</li>
+												<li>Designed a modular interface, enabling easy rebranding for different clients</li>
+												<li>Used color, typography, and whitespace to create a calm, focused experience for users dealing with high-stakes forms</li>
+												<li>Created consistent visual states (e.g. editing, completed, error) for checklist-style task flows</li>
+												<li>Integrated icons and feedback states to aid non-native English speakers and users with assistive devices</li>
+											</ul>
+										</section>
+										<hr />
+										<section>
+											<h2>Key Features</h2>
+											<h3>Guided Applicant Flow</h3>
+											<p>Applicants are led through a structured onboarding process:</p>
+											<ul>
+												<li>Fill in Personal Information</li>
+												<li>Complete a Legal Questionnaire</li>
+												<li>Download Required Forms</li>
+												<li>Upload Completed & Supporting Documents</li>
+												<li>Review & Submit</li>
+											</ul>
+											<p>A persistent progress tracker ensures clarity and confidence.</p>
+											<h3>Secure Digital Signatures</h3>
+											<p>An integrated in-browser signing of required documents (e.g., OF306, NDAs), with tools for drawing or typing signatures and saving securely.</p>
+											<h3>Document Verification</h3>
+											<p>The adjudicator dashboard includes OCR-assisted ID verification, cross-referencing submitted documents with application and database records to flag mismatches.</p>
+											<h3>Document Management</h3>
+											<p>Applicants can:</p>
+											<ul>
+												<li>Download customized form packets</li>
+												<li>Upload signed forms and identity documents</li>
+												<li>View completed forms prior to submission</li>
+											</ul>
+										</section>
+										<hr />
+										<section>
+											<h2>Accessibility</h2>
+											<p>The system complies fully with Section 508, which is a superset of WCAG and W3C accessibility standards. Accessibility features include:</p>
+											<ul>
+												<li>Full keyboard navigation</li>
+												<li>Screen reader-friendly layouts and labels</li>
+												<li>Color contrast and legibility support</li>
+												<li>ARIA roles and error handling for assistive tech users</li>
+											</ul>
+										</section>
+										<hr />
+										<section>
+											<h2>Outcomes</h2>
+											<ul>
+												<li>68% improvement in processing time from application to billing</li>
+												<li>Automated workflows significantly reduce staffing burden</li>
+												<li>Enhanced document accuracy with integrated OCR and validation</li>
+												<li>Universal usability through full accessibility compliance</li>
+												<li>Scalable across agencies with configurable front-end branding and workflows</li>
+											</ul>
+										</section>
+									</div>
+									<button class="casestudy-btn" title="Open/Close Toggle"></button>
+								</div>
+							</div>
+							<div class="project-container">
+								<p class="project-header" id="text10">Bureau of Educational and Cultural Affairs: <br>Knowledge Management Tool</p>
+								<div id="gallery01" class="gallery">
+									<div class="inner">
+										<ul>
+											<li>
+												<a href="assets/images/gallery01/65e11b4f_original.jpg" class="thumbnail n01"><span class="frame"><img src="assets/images/gallery01/65e11b4f.jpg" alt="Access Notice and Consent" data-caption="Access Notice and Consent" /></span></a>
+												<div class="caption">
+													<p>Access Notice and Consent</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery01/3f4c9ab1_original.jpg" class="thumbnail n02"><span class="frame"><img src="assets/images/gallery01/3f4c9ab1.jpg" alt="Participant Search" data-caption="Participant Search" /></span></a>
+												<div class="caption">
+													<p>Participant Search</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery01/ba295cd4_original.jpg" class="thumbnail n03"><span class="frame"><img src="assets/images/gallery01/ba295cd4.jpg" alt="Participant Search - Expanded" data-caption="Participant Search - Expanded" /></span></a>
+												<div class="caption">
+													<p>Participant Search - Expanded</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery01/e072824e_original.jpg" class="thumbnail n04"><span class="frame"><img src="assets/images/gallery01/e072824e.jpg" alt="Funding Item" data-caption="Funding Item" /></span></a>
+												<div class="caption">
+													<p>Funding Item</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery01/3dc7e14c_original.jpg" class="thumbnail n05"><span class="frame"><img src="assets/images/gallery01/3dc7e14c.jpg" alt="Funding Item - Edit Modal" data-caption="Funding Item - Edit Modal" /></span></a>
+												<div class="caption">
+													<p>Funding Item - Edit Modal</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery01/aa2e3481_original.jpg" class="thumbnail n06"><span class="frame"><img src="assets/images/gallery01/aa2e3481.jpg" alt="Travel Overview" data-caption="Travel Overview" /></span></a>
+												<div class="caption">
+													<p>Travel Overview</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery01/7306d991_original.jpg" class="thumbnail n07"><span class="frame"><img src="assets/images/gallery01/7306d991.jpg" alt="Travel Stop Details" data-caption="Travel Stop Details" /></span></a>
+												<div class="caption">
+													<p>Travel Stop Details</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery01/a4c76a64_original.jpg" class="thumbnail n08"><span class="frame"><img src="assets/images/gallery01/a4c76a64.jpg" alt="Add Location Modal" data-caption="Add Location Modal" /></span></a>
+												<div class="caption">
+													<p>Add Location Modal</p>
+												</div>
+											</li>
+											<li>
+												<a href="assets/images/gallery01/0fa860b2_original.jpg" class="thumbnail n09"><span class="frame"><img src="assets/images/gallery01/0fa860b2.jpg" alt="Travel Groups Modal" data-caption="Travel Groups Modal" /></span></a>
+												<div class="caption">
+													<p>Travel Groups Modal</p>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="casestudy-component">
+									<div id="gallery01-CaseStudy" class="casestudy">
+										<section>
+											<h1>Project Overview</h1>
+											<p> — <strong><em>Knowledge Management Tool (KMT)</em></strong></p>
+											<p>This project focused on the design of a <strong>Knowledge Management Tool</strong> for the <strong>Bureau of Educational and Cultural Affairs (ECA)</strong>, a division of the U.S. Department of State. The system was intended to provide streamlined access to program data, documentation, and participant tracking across a range of international cultural exchange initiatives.</p>
+											<p>IDEO was initially contracted to provide a design vision, producing a style guide and sample UI screens. The remainder of the design and implementation work was carried out by our team at <strong>Buchanan & Edwards</strong>, who took over to build the complete interface and workflows.</p>
+										</section>
+										<hr />
+										<section>
+											<h2>Clients & Use Cases</h2>
+											<p>The KMT platform was built to serve multiple ECA offices and administrators with varying permission levels. Core use cases included:</p>
+											<ul>
+												<li>Tracking participants across programs, sub-programs, and travel periods</li>
+												<li>Managing funding sources, grants, and expenditures</li>
+												<li>Creating and assigning participant groups to travel stops</li>
+												<li>Recording and accessing program impact data over time</li>
+											</ul>
+										</section>
+										<hr />
+										<section>
+											<h2>Research & Discovery</h2>
+											<p>While the initial visual style and a handful of interaction patterns were provided by IDEO, our team conducted ongoing research into ECA’s evolving requirements, including:</p>
+											<ul>
+												<li>Reviewing grant reporting and participant management workflows</li>
+												<li>Working with stakeholders to refine data visibility and permission requirements</li>
+												<li>Assessing technical limitations and integration needs for legacy systems</li>
+											</ul>
+										</section>
+										<hr />
+										<section>
+											<h2>My Role</h2>
+											<p>As the <strong>Interface Designer</strong> on this project, I was responsible for:</p>
+											<ul>
+												<li>Translating IDEO’s style guide into fully realized UI components and layouts</li>
+												<li>Designing and iterating on high-fidelity mockups across all major workflows</li>
+												<li>Collaborating with business analysts and developers to support shifting requirements</li>
+												<li>Ensuring design consistency and usability across screens not covered by the original design vision</li>
+												<li>Providing HTML, CSS, and front-end implementation support where needed</li>
+											</ul>
+										</section>
+										<hr />
+										<section>
+											<h2>UX Design</h2>
+											<ul>
+												<li>Developed clear, step-driven flows for complex user actions like travel planning and funding allocation</li>
+												<li>Structured UI layouts to prioritize discoverability and reduce training burden for State Department staff</li>
+												<li>Worked to balance IDEO’s high-level design vision with practical usability across evolving feature sets</li>
+												<li>Proposed reusable interaction patterns to maintain coherence and reduce developer overhead</li>
+											</ul>
+										</section>
+										<hr />
+										<section>
+											<h2>UI Design</h2>
+											<ul>
+												<li>Extended the provided visual style into a scalable design system</li>
+												<li>Maintained adherence to accessibility best practices throughout the interface</li>
+												<li>Designed tabular layouts for high-density participant and funding data</li>
+												<li>Integrated visual cues and icons to improve user orientation and feedback</li>
+												<li>Provided responsive layouts for consistent experience across screen sizes</li>
+											</ul>
+										</section>
+										<hr />
+										<section>
+											<h2>Key Features</h2>
+											<h3>Participant Tracking</h3>
+											<p>A centralized dashboard allowed administrators to view, filter, and export participant data, organized by fiscal year, program, and project.</p>
+											<h3>Group Assignment & Travel Planning</h3>
+											<p>Users could create participant groups and assign them to travel stops, with a clear overview of arrivals, departures, and group compositions.</p>
+											<h3>Funding Management</h3>
+											<p>Administrators could allocate funds from various grant sources, with tracking for direct and in-kind contributions and unassigned balances.</p>
+											<h3>Location & Travel Stop Management</h3>
+											<p>A guided form allowed entry of location metadata and mapping coordinates for each travel stop destination.</p>
+											<h3>Consent & Policy Acknowledgement</h3>
+											<p>The application began with a formal system use notice to ensure compliance with federal access policies and security expectations.</p>
+										</section>
+										<hr />
+										<section>
+											<h2>Accessibility</h2>
+											<p>The platform was designed to align with <strong>WCAG standards</strong> (<strong>Section 508</strong> did not yet include WCAG at the time of this project). Accessibility considerations included:</p>
+											<ul>
+												<li>Keyboard navigation and form control labeling</li>
+												<li>Color contrast ratios for legibility</li>
+												<li>ARIA support for complex data tables</li>
+												<li>Minimal use of hidden or dynamic content without clear user feedback</li>
+											</ul>
+										</section>
+										<hr />
+										<section>
+											<h2>Outcomes</h2>
+											<ul>
+												<li>Created a complete and extensible UI system from IDEO’s partial vision</li>
+												<li>Delivered high-fidelity screens and prototypes aligned with stakeholder needs</li>
+												<li>Improved workflow clarity for travel planning, funding, and participant reporting</li>
+												<li>Collaborated across disciplines to adapt to evolving federal requirements</li>
+												<li><em>Note: The project was ultimately discontinued due to shifting client priorities; however, the design system and workflows were completed and positioned for future reuse.</em></li>
+											</ul>
+										</section>
+									</div>
+
+									<button class="casestudy-btn" title="Open/Close Toggle"></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="container10" data-scroll-id="design" data-scroll-behavior="default" data-scroll-offset="-6" data-scroll-speed="3" data-scroll-invisible="1" class="container default full">
 					<div class="wrapper">
 						<div class="inner">
 						</div>
@@ -96,7 +893,7 @@
 					<div class="wrapper">
 						<div class="inner">
 							<h2 id="text21">Design</h2>
-							<p id="text12">Graphics &amp; Advertisements</p>
+							<p class="project-header" id="text12">Graphics &amp; Advertisements</p>
 							<div id="gallery07" class="gallery">
 								<div class="inner">
 									<ul>
@@ -155,7 +952,7 @@
 									</ul>
 								</div>
 							</div>
-							<p id="text13">Data Visualization &amp; Workflows</p>
+							<p class="project-header" id="text13">Data Visualization &amp; Workflows</p>
 							<div id="gallery08" class="gallery">
 								<div class="inner">
 									<ul>
@@ -192,7 +989,7 @@
 									</ul>
 								</div>
 							</div>
-							<p id="text16">Branding &amp; Logo work</p>
+							<p class="project-header" id="text16">Branding &amp; Logo work</p>
 							<div id="gallery12" class="gallery">
 								<div class="inner">
 									<ul>
@@ -250,288 +1047,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="container10" data-scroll-id="webapps" data-scroll-behavior="default" data-scroll-offset="-6" data-scroll-speed="3" data-scroll-invisible="1" class="container default full">
-					<div class="wrapper">
-						<div class="inner">
-						</div>
-					</div>
-				</div>
-				<div id="container03" class="container default full">
-					<div class="wrapper">
-						<div class="inner">
-							<h2 id="text14">Web Applications</h2>
-							<p id="text11">COR &amp; PM Portals</p>
-							<div id="gallery02" class="gallery">
-								<div class="inner">
-									<ul>
-										<li>
-											<a href="assets/images/gallery02/7d1fa70f_original.jpg" class="thumbnail n01"><span class="frame"><img src="assets/images/gallery02/7d1fa70f.jpg" alt="Create New" data-caption="Create New" /></span></a>
-											<div class="caption">
-												<p>Create New</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery02/453499c8_original.jpg" class="thumbnail n02"><span class="frame"><img src="assets/images/gallery02/453499c8.jpg" alt="Edit" data-caption="Edit" /></span></a>
-											<div class="caption">
-												<p>Edit</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery02/3fee5a92_original.jpg" class="thumbnail n03"><span class="frame"><img src="assets/images/gallery02/3fee5a92.jpg" alt="View Contract Details 1" data-caption="View Contract Details 1" /></span></a>
-											<div class="caption">
-												<p>View Contract Details 1</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery02/dfb2d995_original.jpg" class="thumbnail n04"><span class="frame"><img src="assets/images/gallery02/dfb2d995.jpg" alt="View Contract Details 2" data-caption="View Contract Details 2" /></span></a>
-											<div class="caption">
-												<p>View Contract Details 2</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery02/50ddc6ea_original.jpg" class="thumbnail n05"><span class="frame"><img src="assets/images/gallery02/50ddc6ea.jpg" alt="Invitee Search" data-caption="Invitee Search" /></span></a>
-											<div class="caption">
-												<p>Invitee Search</p>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<p id="text01">Applicant Dashboard</p>
-							<div id="gallery05" class="gallery">
-								<div class="inner">
-									<ul>
-										<li>
-											<a href="assets/images/gallery05/b81fa610_original.jpg" class="thumbnail n01"><span class="frame"><img src="assets/images/gallery05/b81fa610.jpg" alt="GOA Home / Dashboard" data-caption="GOA Home / Dashboard" /></span></a>
-											<div class="caption">
-												<p>GOA Home / Dashboard</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery05/e6cc51b9_original.jpg" class="thumbnail n02"><span class="frame"><img src="assets/images/gallery05/e6cc51b9.jpg" alt="Case Search Context Menu" data-caption="Case Search Context Menu" /></span></a>
-											<div class="caption">
-												<p>Case Search Context Menu</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery05/4ffc7e65_original.jpg" class="thumbnail n03"><span class="frame"><img src="assets/images/gallery05/4ffc7e65.jpg" alt="Case View" data-caption="Case View" /></span></a>
-											<div class="caption">
-												<p>Case View</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery05/478ada13_original.jpg" class="thumbnail n04"><span class="frame"><img src="assets/images/gallery05/478ada13.jpg" alt="Documents View" data-caption="Documents View" /></span></a>
-											<div class="caption">
-												<p>Documents View</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery05/a7676b84_original.jpg" class="thumbnail n05"><span class="frame"><img src="assets/images/gallery05/a7676b84.jpg" alt="Adjudicator&amp;#39;s Workbook" data-caption="Adjudicator&amp;#39;s Workbook" /></span></a>
-											<div class="caption">
-												<p>Adjudicator&#39;s Workbook</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery05/737e957f_original.jpg" class="thumbnail n06"><span class="frame"><img src="assets/images/gallery05/737e957f.jpg" alt="TSA Pre - PreCheck" data-caption="TSA Pre - PreCheck" /></span></a>
-											<div class="caption">
-												<p>TSA Pre - PreCheck</p>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<p id="text18">TheVerified Web App Mock-Up</p>
-							<div id="gallery04" class="gallery">
-								<div class="inner">
-									<ul>
-										<li>
-											<a href="assets/images/gallery04/fca6a894_original.png" class="thumbnail n01"><span class="frame deferred"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCA4NTUgNTcwIiB3aWR0aD0iODU1IiBoZWlnaHQ9IjU3MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI%2BPHJlY3QgZmlsbD0idHJhbnNwYXJlbnQiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiLz48L3N2Zz4%3D" data-src="assets/images/gallery04/fca6a894.png" alt="Login Screen" data-caption="Login Screen" /></span></a>
-											<div class="caption">
-												<p>Login Screen</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery04/fa33e09c_original.png" class="thumbnail n02"><span class="frame deferred"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCA4NTUgNTcwIiB3aWR0aD0iODU1IiBoZWlnaHQ9IjU3MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI%2BPHJlY3QgZmlsbD0idHJhbnNwYXJlbnQiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiLz48L3N2Zz4%3D" data-src="assets/images/gallery04/fa33e09c.png" alt="Products / Tiers" data-caption="Products / Tiers" /></span></a>
-											<div class="caption">
-												<p>Products / Tiers</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery04/52171949_original.png" class="thumbnail n03"><span class="frame"><img src="assets/images/gallery04/52171949.png" alt="Running Data Checks" data-caption="Running Data Checks" /></span></a>
-											<div class="caption">
-												<p>Running Data Checks</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery04/5d632258_original.png" class="thumbnail n04"><span class="frame deferred"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCA4NTUgNTcwIiB3aWR0aD0iODU1IiBoZWlnaHQ9IjU3MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI%2BPHJlY3QgZmlsbD0idHJhbnNwYXJlbnQiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiLz48L3N2Zz4%3D" data-src="assets/images/gallery04/5d632258.png" alt="Account &amp;amp; Credential Details" data-caption="Account &amp;amp; Credential Details" /></span></a>
-											<div class="caption">
-												<p>Account &amp; Credential Details</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery04/a0d12ebc_original.png" class="thumbnail n05"><span class="frame"><img src="assets/images/gallery04/a0d12ebc.png" alt="Hotel Employee Credentials" data-caption="Hotel Employee Credentials" /></span></a>
-											<div class="caption">
-												<p>Hotel Employee Credentials</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery04/f6bd599e_original.png" class="thumbnail n06"><span class="frame"><img src="assets/images/gallery04/f6bd599e.png" alt="Member Hotels" data-caption="Member Hotels" /></span></a>
-											<div class="caption">
-												<p>Member Hotels</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery04/29b33c1f_original.png" class="thumbnail n07"><span class="frame"><img src="assets/images/gallery04/29b33c1f.png" alt="Hotel Service Vendors" data-caption="Hotel Service Vendors" /></span></a>
-											<div class="caption">
-												<p>Hotel Service Vendors</p>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<p id="text09">Applicant Dashboard - Form Wizard</p>
-							<div id="gallery09" class="gallery">
-								<div class="inner">
-									<ul>
-										<li>
-											<a href="assets/images/gallery09/ec7c79aa_original.jpg" class="thumbnail n01"><span class="frame"><img src="assets/images/gallery09/ec7c79aa.jpg" alt="Token Login" data-caption="Token Login" /></span></a>
-											<div class="caption">
-												<p>Token Login</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery09/f782d60d_original.jpg" class="thumbnail n02"><span class="frame"><img src="assets/images/gallery09/f782d60d.jpg" alt="Demographic Information" data-caption="Demographic Information" /></span></a>
-											<div class="caption">
-												<p>Demographic Information</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery09/29d32265_original.jpg" class="thumbnail n03"><span class="frame"><img src="assets/images/gallery09/29d32265.jpg" alt="Questionnaire" data-caption="Questionnaire" /></span></a>
-											<div class="caption">
-												<p>Questionnaire</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery09/5d417adb_original.jpg" class="thumbnail n04"><span class="frame"><img src="assets/images/gallery09/5d417adb.jpg" alt="Document Downloads" data-caption="Document Downloads" /></span></a>
-											<div class="caption">
-												<p>Document Downloads</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery09/15f204bd_original.jpg" class="thumbnail n05"><span class="frame"><img src="assets/images/gallery09/15f204bd.jpg" alt="Document Uploads" data-caption="Document Uploads" /></span></a>
-											<div class="caption">
-												<p>Document Uploads</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery09/26966b3e_original.jpg" class="thumbnail n06"><span class="frame"><img src="assets/images/gallery09/26966b3e.jpg" alt="Summary" data-caption="Summary" /></span></a>
-											<div class="caption">
-												<p>Summary</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery09/ef6b607f_original.jpg" class="thumbnail n07"><span class="frame"><img src="assets/images/gallery09/ef6b607f.jpg" alt="Completion Page" data-caption="Completion Page" /></span></a>
-											<div class="caption">
-												<p>Completion Page</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery09/ed9ae183_original.jpg" class="thumbnail n08"><span class="frame"><img src="assets/images/gallery09/ed9ae183.jpg" alt="DHS Dashboard" data-caption="DHS Dashboard" /></span></a>
-											<div class="caption">
-												<p>DHS Dashboard</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery09/7643e3bb_original.jpg" class="thumbnail n09"><span class="frame"><img src="assets/images/gallery09/7643e3bb.jpg" alt="DHS - PDF" data-caption="DHS - PDF" /></span></a>
-											<div class="caption">
-												<p>DHS - PDF</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery09/f5829621_original.jpg" class="thumbnail n10"><span class="frame"><img src="assets/images/gallery09/f5829621.jpg" alt="DHS - Sign PDF" data-caption="DHS - Sign PDF" /></span></a>
-											<div class="caption">
-												<p>DHS - Sign PDF</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery09/8dc39cb2_original.jpg" class="thumbnail n11"><span class="frame"><img src="assets/images/gallery09/8dc39cb2.jpg" alt="DHS - Form View" data-caption="DHS - Form View" /></span></a>
-											<div class="caption">
-												<p>DHS - Form View</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery09/3852c12b_original.jpg" class="thumbnail n12"><span class="frame"><img src="assets/images/gallery09/3852c12b.jpg" alt="Manual Identity Document Authentication Tool" data-caption="Manual Identity Document Authentication Tool" /></span></a>
-											<div class="caption">
-												<p>Manual Identity Document Authentication Tool</p>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<p id="text10">Bureau of Educational and Cultural Affairs - Knowledge Management Tool</p>
-							<div id="gallery01" class="gallery">
-								<div class="inner">
-									<ul>
-										<li>
-											<a href="assets/images/gallery01/65e11b4f_original.jpg" class="thumbnail n01"><span class="frame"><img src="assets/images/gallery01/65e11b4f.jpg" alt="Access Notice and Consent" data-caption="Access Notice and Consent" /></span></a>
-											<div class="caption">
-												<p>Access Notice and Consent</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery01/3f4c9ab1_original.jpg" class="thumbnail n02"><span class="frame"><img src="assets/images/gallery01/3f4c9ab1.jpg" alt="Participant Search" data-caption="Participant Search" /></span></a>
-											<div class="caption">
-												<p>Participant Search</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery01/ba295cd4_original.jpg" class="thumbnail n03"><span class="frame"><img src="assets/images/gallery01/ba295cd4.jpg" alt="Participant Search - Expanded" data-caption="Participant Search - Expanded" /></span></a>
-											<div class="caption">
-												<p>Participant Search - Expanded</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery01/e072824e_original.jpg" class="thumbnail n04"><span class="frame"><img src="assets/images/gallery01/e072824e.jpg" alt="Funding Item" data-caption="Funding Item" /></span></a>
-											<div class="caption">
-												<p>Funding Item</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery01/3dc7e14c_original.jpg" class="thumbnail n05"><span class="frame"><img src="assets/images/gallery01/3dc7e14c.jpg" alt="Funding Item - Edit Modal" data-caption="Funding Item - Edit Modal" /></span></a>
-											<div class="caption">
-												<p>Funding Item - Edit Modal</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery01/aa2e3481_original.jpg" class="thumbnail n06"><span class="frame"><img src="assets/images/gallery01/aa2e3481.jpg" alt="Travel Overview" data-caption="Travel Overview" /></span></a>
-											<div class="caption">
-												<p>Travel Overview</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery01/7306d991_original.jpg" class="thumbnail n07"><span class="frame"><img src="assets/images/gallery01/7306d991.jpg" alt="Travel Stop Details" data-caption="Travel Stop Details" /></span></a>
-											<div class="caption">
-												<p>Travel Stop Details</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery01/a4c76a64_original.jpg" class="thumbnail n08"><span class="frame"><img src="assets/images/gallery01/a4c76a64.jpg" alt="Add Location Modal" data-caption="Add Location Modal" /></span></a>
-											<div class="caption">
-												<p>Add Location Modal</p>
-											</div>
-										</li>
-										<li>
-											<a href="assets/images/gallery01/0fa860b2_original.jpg" class="thumbnail n09"><span class="frame"><img src="assets/images/gallery01/0fa860b2.jpg" alt="Travel Groups Modal" data-caption="Travel Groups Modal" /></span></a>
-											<div class="caption">
-												<p>Travel Groups Modal</p>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+
 				<div id="container08" data-scroll-id="gamesart" data-scroll-behavior="default" data-scroll-offset="-6" data-scroll-speed="3" data-scroll-invisible="1" class="container default full">
 					<div class="wrapper">
 						<div class="inner">
@@ -542,7 +1058,7 @@
 					<div class="wrapper">
 						<div class="inner">
 							<h2 id="text07">Games &amp; Art</h2>
-							<p id="text20">co.llide - Online Battle Arena Game</p>
+							<p class="project-header" id="text20">co.llide - Online Battle Arena Game</p>
 							<div id="gallery11" class="gallery">
 								<div class="inner">
 									<ul>
@@ -603,7 +1119,7 @@
 									</ul>
 								</div>
 							</div>
-							<p id="text08">Nyx - Mobile Puzzle Game</p>
+							<p class="project-header" id="text08">Nyx - Mobile Puzzle Game</p>
 							<div id="gallery06" class="gallery">
 								<div class="inner">
 									<ul>
@@ -646,7 +1162,7 @@
 									</ul>
 								</div>
 							</div>
-							<p id="text19">Concept Art</p>
+							<p class="project-header" id="text19">Concept Art</p>
 							<div id="gallery10" class="gallery">
 								<div class="inner">
 									<ul>
@@ -701,7 +1217,30 @@
 			</div>
 		</div>
 	</div>
+
 	<script src="assets/main.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			document.querySelectorAll('.project-container').forEach(function (component) {
+				const casestudy = component.querySelector('.casestudy-component');
+				const btn = casestudy.querySelector('.casestudy-btn');
+				const content = casestudy.querySelector('.casestudy');
+				btn.addEventListener('click', function () {
+					var casestudyPosition = component.getBoundingClientRect().top;
+					var casestudyContentPosition = casestudy.getBoundingClientRect().top;
+					var headerHeight = document.getElementById('container04').offsetHeight;
+					if (content.classList.contains('expanded')) {
+						content.scrollTop = 0;
+						content.classList.remove('expanded');
+						window.scrollTo({ top: (casestudyPosition + window.scrollY - headerHeight - 80), behavior: 'smooth' });
+					} else {
+						content.classList.add('expanded');
+						window.scrollTo({ top: (casestudyContentPosition + window.scrollY - headerHeight - 80), behavior: 'smooth' });
+					}
+				});
+			});
+		});
+	</script>
 </body>
 
 </html>

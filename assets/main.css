@@ -24,7 +24,8 @@ body:before {
 	transform: scale(1);
 	width: 100vw;
 	z-index: 0;
-	background-image: linear-gradient(0deg, #1C4B75 0%, #03111F 100%);
+	/* background-image: linear-gradient(0deg, #1C4B75 0%, #03111F 100%); */
+	background-image: linear-gradient(0deg, #1C4B75 0%, #204D7B 100%);
 	background-position: 0% 0%;
 	background-repeat: repeat;
 	background-size: auto;
@@ -735,20 +736,27 @@ h1 span[style], h2 span[style], h3 span[style], p span[style], h1 strong, h2 str
 	direction: var(--site-language-direction);
 	overflow: hidden;
 	text-overflow: ellipsis;
-	transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+	transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, margin-top 0.25s ease, margin-bottom 0.25s ease, box-shadow 0.25s ease;
 }
 
 #buttons02 .button {
-	background-color: #385080;
+	/* background-color: #385080; */
+	/* background-color: #603f00; */
+	  background-color: #cc6408;
 	color: #FFFFFF;
-	background-image: linear-gradient(330deg, #2F446E 0%, rgba(56,80,128,0.008) 100%);
+	/* background-image: linear-gradient(330deg, #2F446E 0%, rgba(56,80,128,0.008) 100%); */
+	background-image: linear-gradient(350deg, #C88D4E 0%, rgba(56, 80, 128, 0.5) 100%);
 	background-position: 0% 0%;
 	background-repeat: repeat;
 	background-size: cover;
 }
 
 #buttons02 .button:hover {
-	background-color: #506EAB !important;
+	/* background-color: #506EAB !important; */
+	background-color: #FFA700 !important;
+	margin-top: 1px;
+	margin-bottom: -1px;
+	box-shadow: 0rem 0.075rem 0rem 0rem rgba(0,0,0,0.478);
 }
 
 #buttons01 {
@@ -774,9 +782,12 @@ h1 span[style], h2 span[style], h3 span[style], p span[style], h1 strong, h2 str
 	line-height: 2rem;
 	padding: 0 1rem;
 	vertical-align: middle;
-	font-variant: small-caps;
-	font-family: 'Quattrocento Sans', sans-serif;
-	font-size: 1em;
+	/* font-variant: small-caps;
+	font-family: 'Quattrocento Sans', sans-serif; */
+	font-variant: normal;
+	font-family: 'Roboto Serif', serif;
+	/* font-size: 1em; */
+	font-size: 0.8em;
 	font-weight: 400;
 	border-radius: 0.125rem;
 	transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
@@ -811,12 +822,17 @@ h1 span[style], h2 span[style], h3 span[style], p span[style], h1 strong, h2 str
 }
 
 #buttons01 .button:hover {
-	border-color: #69A5DB !important;
-	color: #69A5DB !important;
+	/* border-color: #69A5DB !important;
+	color: #69A5DB !important; */
+	border-color: #EEEEEE !important;
+	background-color: #EEEEEE !important;
+	color: rgb(48, 65, 142) !important;
+	/* font-weight: bold; */
 }
 
 #buttons01 .button:hover svg {
 	fill: #69A5DB !important;
+	fill: rgb(48, 65, 142) !important;
 }
 
 .container {
@@ -869,7 +885,8 @@ h1 span[style], h2 span[style], h3 span[style], p span[style], h1 strong, h2 str
 	width: 100%;
 	align-items: center;
 	justify-content: center;
-	background-color: #001C30;
+	/* background-color: #001C30; */
+	background-color: #0F395E;
 }
 
 #container04:not(:first-child) {
@@ -4730,7 +4747,7 @@ h1 span[style], h2 span[style], h3 span[style], p span[style], h1 strong, h2 str
 		min-height: auto;
 	}
 	
-	#container02:not(:first-child) {
+	#container03:not(:first-child) {
 		margin-top: 3rem !important;
 	}
 	
